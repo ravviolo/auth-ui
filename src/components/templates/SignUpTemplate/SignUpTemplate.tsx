@@ -1,4 +1,5 @@
 import { AuthHeader } from 'components/molecules';
+import { SignUpForm } from 'components/organisms';
 
 interface Props {
   onSubmit: (email: string, password: string) => void;
@@ -18,6 +19,7 @@ export const SignUpTemplate = ({
   return (
     <div>
       <AuthHeader title="Sign Up" />
+      <SignUpForm onSubmit={onSubmit} />
     </div>
   );
 };

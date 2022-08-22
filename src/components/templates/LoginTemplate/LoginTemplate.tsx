@@ -1,4 +1,5 @@
 import { AuthHeader } from 'components/molecules';
+import { LoginForm } from 'components/organisms';
 
 interface Props {
   onSubmit: (
@@ -22,6 +23,7 @@ export const LoginTemplate = ({
   return (
     <div>
       <AuthHeader title="Login" />
+      <LoginForm onSubmit={onSubmit} />
     </div>
   );
 };

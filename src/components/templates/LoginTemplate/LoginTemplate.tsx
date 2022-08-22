@@ -1,3 +1,5 @@
+import { AuthHeader } from 'components/molecules';
+
 interface Props {
   onSubmit: (
     email: string,
@@ -17,5 +19,9 @@ export const LoginTemplate = ({
   onClickGoogle,
   onClickLinkedIn,
 }: Props) => {
-  return <div>LoginTemplate</div>;
+  return (
+    <div>
+      <AuthHeader title="Login" />
+    </div>
+  );
 };

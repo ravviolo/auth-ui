@@ -29,11 +29,11 @@ export const SignUpPage = ({ onClick }: Props) => {
 
   return (
     <SignUpTemplate
-      onSubmit={handleSignUpSubmit}
       onClick={onClick}
       onClickFacebook={handleSignUpViaFacebook}
       onClickGoogle={handleSignUpViaGoogle}
       onClickLinkedIn={handleSignUpViaLinkedIn}
+      onSubmit={handleSignUpSubmit}
     />
   );
 };

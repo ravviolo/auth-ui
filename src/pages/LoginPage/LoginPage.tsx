@@ -34,11 +34,11 @@ export const LoginPage = ({ onClick }: Props) => {
 
   return (
     <LoginTemplate
-      onSubmit={handleLoginSubmit}
       onClick={onClick}
-      onClickGoogle={handleLoginViaGoogle}
       onClickFacebook={handleLoginViaFacebook}
+      onClickGoogle={handleLoginViaGoogle}
       onClickLinkedIn={handleLoginViaLinkedIn}
+      onSubmit={handleLoginSubmit}
     />
   );
 };

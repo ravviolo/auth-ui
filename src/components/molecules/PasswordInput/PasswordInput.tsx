@@ -9,8 +9,8 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, Props>(
   ({ id, name }, ref) => {
     return (
       <div>
-        <InputLabel label="Password" htmlFor={id} />
-        <InputField id={id} name={name} type="password" ref={ref} />
+        <InputLabel htmlFor={id} label="Password" />
+        <InputField ref={ref} id={id} name={name} type="password" />
       </div>
     );
   }

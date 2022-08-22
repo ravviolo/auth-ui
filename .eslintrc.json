@@ -60,6 +60,15 @@
       "error",
       { "extensions": [".tsx", ".jsx"] }
     ],
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "multiline": "last",
+        "reservedFirst": true
+      }
+    ],
     "@typescript-eslint/no-unused-vars": "warn",
     "prettier/prettier": [
       "error",

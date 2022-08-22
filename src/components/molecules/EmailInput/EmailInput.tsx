@@ -9,8 +9,8 @@ export const EmailInput = React.forwardRef<HTMLInputElement, Props>(
   ({ id, name }, ref) => {
     return (
       <div>
-        <InputLabel label="Email" htmlFor={id} />
-        <InputField type="email" id={id} name={name} ref={ref} />
+        <InputLabel htmlFor={id} label="Email" />
+        <InputField ref={ref} id={id} name={name} type="email" />
       </div>
     );
   }

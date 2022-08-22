@@ -23,7 +23,7 @@ export const SignUpForm = ({ onSubmit }: Props) => {
   return (
     <form onSubmit={handleSubmit}>
       <EmailInput ref={emailRef} id="email" name="email" />
-      <PasswordInput id="password" name="password" ref={passwordRef} />
+      <PasswordInput ref={passwordRef} id="password" name="password" />
     </form>
   );
 };

@@ -19,7 +19,8 @@
     "paths": {
       "components/*": ["components/*/index.ts"],
       "pages": ["pages/index.ts"]
-    }
+    },
+    "allowUmdGlobalAccess": true
   },
   "include": ["src"]
 }

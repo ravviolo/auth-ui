@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { LoginTemplate } from 'components';
+import { LoginTemplate } from 'components/templates';
 
 interface Props {
   onClick: () => void;

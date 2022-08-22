@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { SignUpTemplate } from 'components';
+import { SignUpTemplate } from 'components/templates';
 
 interface Props {
   onClick: () => void;

@@ -1,5 +1,5 @@
 import { Divider } from 'components/atoms';
-import { AuthHeader, AuthSocials } from 'components/molecules';
+import { AuthFooter, AuthHeader, AuthSocials } from 'components/molecules';
 import { LoginForm } from 'components/organisms';
 
 interface Props {
@@ -13,6 +13,10 @@ interface Props {
   onClickFacebook: () => void;
   onClickLinkedIn: () => void;
   onResetPassword: () => void;
+  headerText: string;
+  footerText: string;
+  footerButtonLabel: string;
+  dividerLabel: string;
 }
 
 export const LoginTemplate = ({
@@ -22,16 +26,25 @@ export const LoginTemplate = ({
   onClickGoogle,
   onClickLinkedIn,
   onResetPassword,
+  headerText,
+  footerText,
+  footerButtonLabel,
+  dividerLabel,
 }: Props) => {
   return (
     <div>
-      <AuthHeader title="Login" />
+      <AuthHeader title={headerText} />
       <LoginForm onResetPassword={onResetPassword} onSubmit={onSubmit} />
-      <Divider label="OR" />
+      <Divider label={dividerLabel} />
       <AuthSocials
         onClickFacebook={onClickFacebook}
         onClickGoogle={onClickGoogle}
         onClickLinkedIn={onClickLinkedIn}
+      />
+      <AuthFooter
+        buttonLabel={footerButtonLabel}
+        text={footerText}
+        onClick={onClick}
       />
     </div>
   );

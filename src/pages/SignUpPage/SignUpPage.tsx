@@ -29,6 +29,10 @@ export const SignUpPage = ({ onClick }: Props) => {
 
   return (
     <SignUpTemplate
+      dividerLabel="OR"
+      footerButtonLabel="Login"
+      footerText="Already a user?"
+      headerText="Sign Up"
       onClick={onClick}
       onClickFacebook={handleSignUpViaFacebook}
       onClickGoogle={handleSignUpViaGoogle}

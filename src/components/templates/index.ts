@@ -1,2 +1,2 @@
-export * from './LoginTemplate/LoginTemplate';
-export * from './SignUpTemplate/SignUpTemplate';
+export { LoginTemplate } from './LoginTemplate/LoginTemplate';
+export { SignUpTemplate } from './SignUpTemplate/SignUpTemplate';

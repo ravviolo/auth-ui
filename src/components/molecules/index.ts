@@ -1,5 +1,5 @@
-export * from './AuthFooter/AuthFooter';
-export * from './AuthHeader/AuthHeader';
-export * from './AuthSocials/AuthSocials';
-export * from './EmailInput/EmailInput';
-export * from './PasswordInput/PasswordInput';
+export { AuthFooter } from './AuthFooter/AuthFooter';
+export { AuthHeader } from './AuthHeader/AuthHeader';
+export { AuthSocials } from './AuthSocials/AuthSocials';
+export { EmailInput } from './EmailInput/EmailInput';
+export { PasswordInput } from './PasswordInput/PasswordInput';

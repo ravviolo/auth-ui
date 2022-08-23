@@ -1,2 +1,2 @@
-export * from './LoginPage/LoginPage';
-export * from './SignUpPage/SignUpPage';
+export { LoginPage } from './LoginPage/LoginPage';
+export { SignUpPage } from './SignUpPage/SignUpPage';

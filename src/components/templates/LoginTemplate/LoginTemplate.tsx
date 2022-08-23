@@ -1,3 +1,4 @@
+import { Divider } from 'components/atoms';
 import { AuthHeader } from 'components/molecules';
 import { LoginForm } from 'components/organisms';
 
@@ -26,6 +27,7 @@ export const LoginTemplate = ({
     <div>
       <AuthHeader title="Login" />
       <LoginForm onResetPassword={onResetPassword} onSubmit={onSubmit} />
+      <Divider label="OR" />
     </div>
   );
 };

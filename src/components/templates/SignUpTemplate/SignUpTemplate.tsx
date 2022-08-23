@@ -1,3 +1,4 @@
+import { Divider } from 'components/atoms';
 import { AuthHeader } from 'components/molecules';
 import { SignUpForm } from 'components/organisms';
 
@@ -20,6 +21,7 @@ export const SignUpTemplate = ({
     <div>
       <AuthHeader title="Sign Up" />
       <SignUpForm onSubmit={onSubmit} />
+      <Divider label="OR" />
     </div>
   );
 };

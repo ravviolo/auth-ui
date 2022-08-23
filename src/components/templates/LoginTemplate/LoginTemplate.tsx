@@ -11,6 +11,7 @@ interface Props {
   onClickGoogle: () => void;
   onClickFacebook: () => void;
   onClickLinkedIn: () => void;
+  onResetPassword: () => void;
 }
 
 export const LoginTemplate = ({
@@ -19,11 +20,12 @@ export const LoginTemplate = ({
   onClickFacebook,
   onClickGoogle,
   onClickLinkedIn,
+  onResetPassword,
 }: Props) => {
   return (
     <div>
       <AuthHeader title="Login" />
-      <LoginForm onSubmit={onSubmit} />
+      <LoginForm onResetPassword={onResetPassword} onSubmit={onSubmit} />
     </div>
   );
 };

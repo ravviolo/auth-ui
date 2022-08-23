@@ -32,12 +32,17 @@ export const LoginPage = ({ onClick }: Props) => {
     console.log('Logging user via Facebook');
   };
 
+  const handleResetPassword = (): void => {
+    console.log('Reset password');
+  };
+
   return (
     <LoginTemplate
       onClick={onClick}
       onClickFacebook={handleLoginViaFacebook}
       onClickGoogle={handleLoginViaGoogle}
       onClickLinkedIn={handleLoginViaLinkedIn}
+      onResetPassword={handleResetPassword}
       onSubmit={handleLoginSubmit}
     />
   );

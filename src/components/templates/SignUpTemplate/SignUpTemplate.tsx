@@ -1,5 +1,5 @@
 import { Divider } from 'components/atoms';
-import { AuthHeader } from 'components/molecules';
+import { AuthHeader, AuthSocials } from 'components/molecules';
 import { SignUpForm } from 'components/organisms';
 
 interface Props {
@@ -22,6 +22,11 @@ export const SignUpTemplate = ({
       <AuthHeader title="Sign Up" />
       <SignUpForm onSubmit={onSubmit} />
       <Divider label="OR" />
+      <AuthSocials
+        onClickFacebook={onClickFacebook}
+        onClickGoogle={onClickGoogle}
+        onClickLinkedIn={onClickLinkedIn}
+      />
     </div>
   );
 };

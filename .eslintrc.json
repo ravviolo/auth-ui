@@ -69,6 +69,7 @@
         "reservedFirst": true
       }
     ],
+    "react/require-default-props": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "prettier/prettier": [
       "error",

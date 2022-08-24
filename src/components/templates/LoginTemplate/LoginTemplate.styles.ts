@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { Flex } from 'components/atoms';
 
 export const Container = styled.main`
-  width: 100%;
-  height: 60vh;
+  width: 25vw;
+  height: 70vh;
   padding: 3em;
   background-color: #fff;
   border-radius: 10px;

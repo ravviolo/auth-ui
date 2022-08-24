@@ -1,4 +1,4 @@
-import { TextButton } from 'components/atoms';
+import * as S from './AuthFooter.styles';
 
 interface Props {
   onClick: () => void;
@@ -8,9 +8,11 @@ interface Props {
 
 export const AuthFooter = ({ onClick, buttonLabel, text }: Props) => {
   return (
-    <footer>
-      <p>{text}</p>
-      <TextButton label={buttonLabel} type="button" onClick={onClick} />
-    </footer>
+    <S.Footer>
+      <S.FooterFlex direction="row">
+        <p>{text}</p>
+        <S.FooterButton label={buttonLabel} type="button" onClick={onClick} />
+      </S.FooterFlex>
+    </S.Footer>
   );
 };

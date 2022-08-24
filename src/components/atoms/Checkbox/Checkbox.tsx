@@ -9,7 +9,7 @@ interface Props {
 
 export const Checkbox = React.forwardRef<HTMLInputElement, Props>(
   ({ id, name }, ref) => {
-    return <S.ChechboxInput ref={ref} id={id} name={name} type="checkbox" />;
+    return <S.CheckboxInput ref={ref} id={id} name={name} type="checkbox" />;
   }
 );
 

@@ -1,7 +1,14 @@
+import * as S from './Divider.styles';
+
 interface Props {
   label?: string;
 }
 
 export const Divider = ({ label }: Props) => {
-  return <div>{label && <p>{label}</p>}</div>;
+  return (
+    <S.Container>
+      <S.Line />
+      {label && <S.Badge>{label}</S.Badge>}
+    </S.Container>
+  );
 };

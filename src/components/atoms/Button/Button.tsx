@@ -1,3 +1,5 @@
+import * as S from './Button.styles';
+
 interface Props {
   label: string;
   type: 'button' | 'submit';
@@ -6,8 +8,8 @@ interface Props {
 
 export const Button = ({ label, type, onClick }: Props) => {
   return (
-    <button type={type === 'button' ? 'button' : 'submit'} onClick={onClick}>
+    <S.Button type={type === 'button' ? 'button' : 'submit'} onClick={onClick}>
       {label}
-    </button>
+    </S.Button>
   );
 };

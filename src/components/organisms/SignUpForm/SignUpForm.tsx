@@ -3,6 +3,8 @@ import { useRef } from 'react';
 import { Button } from 'components/atoms';
 import { EmailInput, PasswordInput } from 'components/molecules';
 
+import * as S from './SignUpForm.styles';
+
 interface Props {
   onSubmit: (email: string, password: string) => void;
 }
@@ -23,9 +25,11 @@ export const SignUpForm = ({ onSubmit }: Props) => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <EmailInput ref={emailRef} id="email" name="email" />
-      <PasswordInput ref={passwordRef} id="password" name="password" />
-      <Button label="Sign Up" type="submit" />
+      <S.Container direction="column">
+        <EmailInput ref={emailRef} id="email" name="email" />
+        <PasswordInput ref={passwordRef} id="password" name="password" />
+        <Button label="Sign Up" type="submit" />
+      </S.Container>
     </form>
   );
 };

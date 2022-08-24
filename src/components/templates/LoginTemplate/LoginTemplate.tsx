@@ -35,19 +35,21 @@ export const LoginTemplate = ({
 }: Props) => {
   return (
     <S.Container>
-      <AuthHeader title={headerText} />
-      <LoginForm onResetPassword={onResetPassword} onSubmit={onSubmit} />
-      <Divider label={dividerLabel} />
-      <AuthSocials
-        onClickFacebook={onClickFacebook}
-        onClickGoogle={onClickGoogle}
-        onClickLinkedIn={onClickLinkedIn}
-      />
-      <AuthFooter
-        buttonLabel={footerButtonLabel}
-        text={footerText}
-        onClick={onClick}
-      />
+      <S.TemplateFlex direction="column">
+        <AuthHeader title={headerText} />
+        <LoginForm onResetPassword={onResetPassword} onSubmit={onSubmit} />
+        <Divider label={dividerLabel} />
+        <AuthSocials
+          onClickFacebook={onClickFacebook}
+          onClickGoogle={onClickGoogle}
+          onClickLinkedIn={onClickLinkedIn}
+        />
+        <AuthFooter
+          buttonLabel={footerButtonLabel}
+          text={footerText}
+          onClick={onClick}
+        />
+      </S.TemplateFlex>
     </S.Container>
   );
 };

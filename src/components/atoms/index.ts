@@ -1,6 +1,7 @@
 export { Button } from './Button/Button';
 export { Checkbox } from './Checkbox/Checkbox';
 export { Divider } from './Divider/Divider';
+export { Flex } from './Flex/Flex';
 export { Heading } from './Heading/Heading';
 export { IconButton } from './IconButton/IconButton';
 export { InputField } from './InputField/InputField';

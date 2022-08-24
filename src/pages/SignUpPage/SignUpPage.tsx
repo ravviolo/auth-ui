@@ -16,15 +16,15 @@ export const SignUpPage = ({ onClick }: Props) => {
   };
 
   const handleSignUpViaGoogle = (): void => {
-    console.log('Logging user via Google');
+    console.log('Registering user via Google');
   };
 
   const handleSignUpViaLinkedIn = (): void => {
-    console.log('Logging user via LinkedIn');
+    console.log('Registering user via LinkedIn');
   };
 
   const handleSignUpViaFacebook = (): void => {
-    console.log('Logging user via Facebook');
+    console.log('Registering user via Facebook');
   };
 
   return (

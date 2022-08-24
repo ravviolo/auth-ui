@@ -2,6 +2,8 @@ import { Divider } from 'components/atoms';
 import { AuthFooter, AuthHeader, AuthSocials } from 'components/molecules';
 import { SignUpForm } from 'components/organisms';
 
+import * as S from './SignUpTemplate.styles';
+
 interface Props {
   onSubmit: (email: string, password: string) => void;
   onClick: () => void;
@@ -26,7 +28,7 @@ export const SignUpTemplate = ({
   dividerLabel,
 }: Props) => {
   return (
-    <div>
+    <S.Container>
       <AuthHeader title={headerText} />
       <SignUpForm onSubmit={onSubmit} />
       <Divider label={dividerLabel} />
@@ -40,6 +42,6 @@ export const SignUpTemplate = ({
         text={footerText}
         onClick={onClick}
       />
-    </div>
+    </S.Container>
   );
 };

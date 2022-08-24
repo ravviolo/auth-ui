@@ -2,6 +2,8 @@ import { Divider } from 'components/atoms';
 import { AuthFooter, AuthHeader, AuthSocials } from 'components/molecules';
 import { LoginForm } from 'components/organisms';
 
+import * as S from './LoginTemplate.styles';
+
 interface Props {
   onSubmit: (
     email: string,
@@ -32,7 +34,7 @@ export const LoginTemplate = ({
   dividerLabel,
 }: Props) => {
   return (
-    <div>
+    <S.Container>
       <AuthHeader title={headerText} />
       <LoginForm onResetPassword={onResetPassword} onSubmit={onSubmit} />
       <Divider label={dividerLabel} />
@@ -46,6 +48,6 @@ export const LoginTemplate = ({
         text={footerText}
         onClick={onClick}
       />
-    </div>
+    </S.Container>
   );
 };

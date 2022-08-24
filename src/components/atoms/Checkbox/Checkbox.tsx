@@ -1,5 +1,7 @@
 import React from 'react';
 
+import * as S from './Checkbox.styles';
+
 interface Props {
   id: string;
   name: string;
@@ -7,7 +9,7 @@ interface Props {
 
 export const Checkbox = React.forwardRef<HTMLInputElement, Props>(
   ({ id, name }, ref) => {
-    return <input ref={ref} id={id} name={name} type="checkbox" />;
+    return <S.ChechboxInput ref={ref} id={id} name={name} type="checkbox" />;
   }
 );
 

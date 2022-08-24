@@ -1,13 +1,20 @@
+import * as S from './TextButton.styles';
+
 interface Props {
   label: string;
   type: 'button' | 'submit';
+  className?: string;
   onClick?: () => void;
 }
 
-export const TextButton = ({ label, type, onClick }: Props) => {
+export const TextButton = ({ label, type, className, onClick }: Props) => {
   return (
-    <button type={type === 'button' ? 'button' : 'submit'} onClick={onClick}>
+    <S.TextButton
+      className={className}
+      type={type === 'button' ? 'button' : 'submit'}
+      onClick={onClick}
+    >
       {label}
-    </button>
+    </S.TextButton>
   );
 };

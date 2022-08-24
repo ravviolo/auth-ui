@@ -1,7 +1,9 @@
 import { useRef } from 'react';
 
-import { Button, Checkbox, InputLabel, TextButton } from 'components/atoms';
+import { Button, Checkbox, InputLabel } from 'components/atoms';
 import { EmailInput, PasswordInput } from 'components/molecules';
+
+import * as S from './LoginForm.styles';
 
 interface Props {
   onSubmit: (
@@ -31,24 +33,27 @@ export const LoginForm = ({ onSubmit, onResetPassword }: Props) => {
 
   return (
     <form onSubmit={handleLogin}>
-      <EmailInput ref={emailRef} id="email" name="email" />
-      <PasswordInput ref={passwordRef} id="password" name="password" />
-      <div>
-        <Checkbox
-          ref={rememberPasswordRef}
-          id="rememberPassword"
-          name="rememberPassword"
-        />
-        <InputLabel htmlFor="rememberPassword" label="Remember me?" />
-      </div>
-      <Button label="Login" type="submit" />
-      <div>
-        <TextButton
+      <S.Container direction="column">
+        <EmailInput ref={emailRef} id="email" name="email" />
+        <S.PasswordControl direction="column">
+          <PasswordInput ref={passwordRef} id="password" name="password" />
+          <S.CheckboxContainer direction="row">
+            <Checkbox
+              ref={rememberPasswordRef}
+              id="rememberPassword"
+              name="rememberPassword"
+            />
+            <InputLabel htmlFor="rememberPassword" label="Remember me?" />
+          </S.CheckboxContainer>
+        </S.PasswordControl>
+        <Button label="Login" type="submit" />
+
+        <S.ResetPasswordButton
           label="Forgot Password?"
           type="button"
           onClick={onResetPassword}
         />
-      </div>
+      </S.Container>
     </form>
   );
 };

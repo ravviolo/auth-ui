@@ -1,5 +1,7 @@
 import React from 'react';
 
+import * as S from './InputField.styles';
+
 interface Props {
   name: string;
   id: string;
@@ -8,7 +10,7 @@ interface Props {
 
 export const InputField = React.forwardRef<HTMLInputElement, Props>(
   ({ id, name, type }, ref) => {
-    return <input ref={ref} id={id} name={name} type={type} />;
+    return <S.Field ref={ref} id={id} name={name} type={type} />;
   }
 );
 

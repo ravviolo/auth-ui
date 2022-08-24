@@ -2,6 +2,8 @@ import React from 'react';
 
 import { InputField, InputLabel } from 'components/atoms';
 
+import * as S from './EmailInput.styles';
+
 interface Props {
   id: string;
   name: string;
@@ -10,10 +12,10 @@ interface Props {
 export const EmailInput = React.forwardRef<HTMLInputElement, Props>(
   ({ id, name }, ref) => {
     return (
-      <div>
+      <S.InputContainer direction="column">
         <InputLabel htmlFor={id} label="Email" />
         <InputField ref={ref} id={id} name={name} type="email" />
-      </div>
+      </S.InputContainer>
     );
   }
 );

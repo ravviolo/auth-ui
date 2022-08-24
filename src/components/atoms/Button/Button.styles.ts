@@ -7,6 +7,7 @@ export const Button = styled.button`
   padding: 0.7rem 1rem;
   background-color: ${colors.primary};
   color: ${colors.textWhite};
+  font-size: 0.9rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   border: none;

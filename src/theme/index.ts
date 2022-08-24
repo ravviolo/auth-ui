@@ -33,4 +33,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width:350px){
+    html {
+        font-size:14px;
+    }  
+}
 `;

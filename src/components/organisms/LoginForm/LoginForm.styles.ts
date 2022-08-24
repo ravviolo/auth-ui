@@ -22,6 +22,7 @@ export const CheckboxContainer = styled(Flex)`
 `;
 
 export const ResetPasswordButton = styled(TextButton)`
+  font-size: 0.9rem;
   color: ${colors.textLight};
   margin-left: auto;
   transform: translateY(-40%);

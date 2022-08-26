@@ -1,15 +1,14 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { Flex, TextButton } from 'components/atoms';
+import { Flex } from 'components/atoms';
 
 export const Footer = styled.footer`
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 `;
 
-export const FooterButton = styled(TextButton)`
-  text-decoration: underline;
+export const FooterLink = styled(Link)`
   text-transform: uppercase;
-  font-size: inherit;
 `;
 
 export const FooterFlex = styled(Flex)`

@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import * as S from './AuthFooter.styles';
 
 interface Props {
@@ -13,8 +11,7 @@ export const AuthFooter = ({ linkText, linkHref, text }: Props) => {
     <S.Footer>
       <S.FooterFlex direction="row">
         <p>{text}</p>
-        <Link to={linkHref}>{linkText}</Link>
-        {/* <S.FooterButton label={buttonLabel} type="button" onClick={onClick} /> */}
+        <S.FooterLink to={linkHref}>{linkText}</S.FooterLink>
       </S.FooterFlex>
     </S.Footer>
   );

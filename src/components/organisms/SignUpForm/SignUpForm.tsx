@@ -6,10 +6,10 @@ import { EmailInput, PasswordInput } from 'components/molecules';
 import * as S from './SignUpForm.styles';
 
 interface Props {
-  onSubmit: (email: string, password: string) => void;
+  onSubmitSignUpForm: (email: string, password: string) => void;
 }
 
-export const SignUpForm = ({ onSubmit }: Props) => {
+export const SignUpForm = ({ onSubmitSignUpForm }: Props) => {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
@@ -20,7 +20,7 @@ export const SignUpForm = ({ onSubmit }: Props) => {
     const password = passwordRef.current?.value;
 
     if (email && password) {
-      onSubmit(email, password);
+      onSubmitSignUpForm(email, password);
     }
   };
   return (

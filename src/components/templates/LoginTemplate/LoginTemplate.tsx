@@ -5,7 +5,7 @@ import { LoginForm } from 'components/organisms';
 import * as S from './LoginTemplate.styles';
 
 interface Props {
-  onSubmit: (
+  onSubmitLoginForm: (
     email: string,
     password: string,
     isPasswordRemembered: boolean
@@ -14,7 +14,7 @@ interface Props {
   onClickGoogle: () => void;
   onClickFacebook: () => void;
   onClickLinkedIn: () => void;
-  onResetPassword: () => void;
+  onClickResetPassword: () => void;
   headerText: string;
   footerText: string;
   footerButtonLabel: string;
@@ -22,12 +22,12 @@ interface Props {
 }
 
 export const LoginTemplate = ({
-  onSubmit,
+  onSubmitLoginForm,
   onClick,
   onClickFacebook,
   onClickGoogle,
   onClickLinkedIn,
-  onResetPassword,
+  onClickResetPassword,
   headerText,
   footerText,
   footerButtonLabel,
@@ -37,7 +37,10 @@ export const LoginTemplate = ({
     <S.Container>
       <S.TemplateFlex direction="column">
         <AuthHeader title={headerText} />
-        <LoginForm onResetPassword={onResetPassword} onSubmit={onSubmit} />
+        <LoginForm
+          onClickResetPassword={onClickResetPassword}
+          onSubmitLoginForm={onSubmitLoginForm}
+        />
         <Divider label={dividerLabel} />
         <AuthSocials
           onClickFacebook={onClickFacebook}

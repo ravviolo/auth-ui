@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const SignUpPage = ({ onClick }: Props) => {
-  const handleSignUpSubmit = (email: string, password: string): void => {
+  const handleSignUpFormSubmit = (email: string, password: string): void => {
     const userCredentials = {
       email,
       password,
@@ -37,7 +37,7 @@ export const SignUpPage = ({ onClick }: Props) => {
       onClickFacebook={handleSignUpViaFacebook}
       onClickGoogle={handleSignUpViaGoogle}
       onClickLinkedIn={handleSignUpViaLinkedIn}
-      onSubmit={handleSignUpSubmit}
+      onSubmitSignUpForm={handleSignUpFormSubmit}
     />
   );
 };

@@ -10,7 +10,7 @@ interface AuthSocial {
   name: string;
   color: string;
   icon: string;
-  handler: () => void;
+  onClickHandler: () => void;
 }
 
 export const AuthSocials = ({
@@ -23,26 +23,31 @@ export const AuthSocials = ({
       name: 'Google',
       color: '#DB4437',
       icon: 'G',
-      handler: onClickGoogle,
+      onClickHandler: onClickGoogle,
     },
-    { name: 'Facebook', color: '#4267B2', icon: 'f', handler: onClickFacebook },
+    {
+      name: 'Facebook',
+      color: '#4267B2',
+      icon: 'f',
+      onClickHandler: onClickFacebook,
+    },
     {
       name: 'LinkedIn',
       color: '#0077B5',
       icon: 'in',
-      handler: onClickLinkedIn,
+      onClickHandler: onClickLinkedIn,
     },
   ];
 
   return (
     <S.Container direction="row">
-      {authSocials.map(({ color, icon, name, handler }) => (
+      {authSocials.map(({ color, icon, name, onClickHandler }) => (
         <S.AuthSocialButton
           key={name}
           color={color}
           icon={icon}
           type="button"
-          onClick={handler}
+          onClick={onClickHandler}
         />
       ))}
     </S.Container>

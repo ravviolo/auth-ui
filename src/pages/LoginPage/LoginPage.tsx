@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const LoginPage = ({ onClick }: Props) => {
-  const handleLoginSubmit = (
+  const handleLoginFormSubmit = (
     email: string,
     password: string,
     isPasswordRemembered: boolean
@@ -46,8 +46,8 @@ export const LoginPage = ({ onClick }: Props) => {
       onClickFacebook={handleLoginViaFacebook}
       onClickGoogle={handleLoginViaGoogle}
       onClickLinkedIn={handleLoginViaLinkedIn}
-      onResetPassword={handleResetPassword}
-      onSubmit={handleLoginSubmit}
+      onClickResetPassword={handleResetPassword}
+      onSubmitLoginForm={handleLoginFormSubmit}
     />
   );
 };

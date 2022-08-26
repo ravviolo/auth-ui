@@ -6,15 +6,18 @@ import { EmailInput, PasswordInput } from 'components/molecules';
 import * as S from './LoginForm.styles';
 
 interface Props {
-  onSubmit: (
+  onSubmitLoginForm: (
     email: string,
     password: string,
     isPasswordRemembered: boolean
   ) => void;
-  onResetPassword: () => void;
+  onClickResetPassword: () => void;
 }
 
-export const LoginForm = ({ onSubmit, onResetPassword }: Props) => {
+export const LoginForm = ({
+  onSubmitLoginForm,
+  onClickResetPassword,
+}: Props) => {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const rememberPasswordRef = useRef<HTMLInputElement>(null);
@@ -27,7 +30,7 @@ export const LoginForm = ({ onSubmit, onResetPassword }: Props) => {
     const isPasswordRemembered = !!rememberPasswordRef.current?.checked;
 
     if (email && password) {
-      onSubmit(email, password, isPasswordRemembered);
+      onSubmitLoginForm(email, password, isPasswordRemembered);
     }
   };
 
@@ -51,7 +54,7 @@ export const LoginForm = ({ onSubmit, onResetPassword }: Props) => {
         <S.ResetPasswordButton
           label="Forgot Password?"
           type="button"
-          onClick={onResetPassword}
+          onClick={onClickResetPassword}
         />
       </S.Container>
     </form>

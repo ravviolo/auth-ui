@@ -6,24 +6,24 @@ import * as S from './SignUpTemplate.styles';
 
 interface Props {
   onSubmitSignUpForm: (email: string, password: string) => void;
-  onClick: () => void;
   onClickGoogle: () => void;
   onClickFacebook: () => void;
   onClickLinkedIn: () => void;
   headerText: string;
   footerText: string;
-  footerButtonLabel: string;
+  footerLinkText: string;
+  footerLinkHref: string;
 }
 
 export const SignUpTemplate = ({
   onSubmitSignUpForm,
-  onClick,
   onClickFacebook,
   onClickGoogle,
   onClickLinkedIn,
   headerText,
   footerText,
-  footerButtonLabel,
+  footerLinkText,
+  footerLinkHref,
 }: Props) => {
   return (
     <S.Container>
@@ -37,9 +37,9 @@ export const SignUpTemplate = ({
           onClickLinkedIn={onClickLinkedIn}
         />
         <AuthFooter
-          buttonLabel={footerButtonLabel}
+          linkHref={footerLinkHref}
+          linkText={footerLinkText}
           text={footerText}
-          onClick={onClick}
         />
       </S.TemplateFlex>
     </S.Container>

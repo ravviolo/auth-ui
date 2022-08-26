@@ -1,11 +1,7 @@
 /* eslint-disable no-console */
 import { SignUpTemplate } from 'components/templates';
 
-interface Props {
-  onClick: () => void;
-}
-
-export const SignUpPage = ({ onClick }: Props) => {
+export const SignUpPage = () => {
   const handleSignUpFormSubmit = (email: string, password: string): void => {
     const userCredentials = {
       email,
@@ -29,10 +25,10 @@ export const SignUpPage = ({ onClick }: Props) => {
 
   return (
     <SignUpTemplate
-      footerButtonLabel="Login"
+      footerLinkHref="/login"
+      footerLinkText="Login"
       footerText="Already a user?"
       headerText="Sign Up"
-      onClick={onClick}
       onClickFacebook={handleSignUpViaFacebook}
       onClickGoogle={handleSignUpViaGoogle}
       onClickLinkedIn={handleSignUpViaLinkedIn}

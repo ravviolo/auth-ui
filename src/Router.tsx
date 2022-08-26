@@ -1,22 +1,15 @@
-import { useState } from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import { LoginPage, SignUpPage } from 'pages';
 
 export const Router = () => {
-  const [page, setPage] = useState<'login' | 'signup'>('login');
-
-  const handleRouting = (): void => {
-    if (page === 'login') {
-      setPage('signup');
-      return;
-    }
-    setPage('login');
-  };
-
   return (
-    <>
-      {page === 'login' && <LoginPage onClick={handleRouting} />}
-      {page === 'signup' && <SignUpPage onClick={handleRouting} />}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Navigate replace to="/login" />} path="/" />
+        <Route element={<LoginPage />} path="/login" />
+        <Route element={<SignUpPage />} path="/signup" />
+      </Routes>
+    </BrowserRouter>
   );
 };

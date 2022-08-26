@@ -1,11 +1,7 @@
 /* eslint-disable no-console */
 import { LoginTemplate } from 'components/templates';
 
-interface Props {
-  onClick: () => void;
-}
-
-export const LoginPage = ({ onClick }: Props) => {
+export const LoginPage = () => {
   const handleLoginFormSubmit = (
     email: string,
     password: string,
@@ -38,10 +34,10 @@ export const LoginPage = ({ onClick }: Props) => {
 
   return (
     <LoginTemplate
-      footerButtonLabel="Sign Up"
+      footerLinkHref="/signup"
+      footerLinkText="Sign Up"
       footerText="Need an account?"
       headerText="Login"
-      onClick={onClick}
       onClickFacebook={handleLoginViaFacebook}
       onClickGoogle={handleLoginViaGoogle}
       onClickLinkedIn={handleLoginViaLinkedIn}

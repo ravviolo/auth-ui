@@ -13,7 +13,6 @@ interface Props {
   headerText: string;
   footerText: string;
   footerButtonLabel: string;
-  dividerLabel: string;
 }
 
 export const SignUpTemplate = ({
@@ -25,14 +24,13 @@ export const SignUpTemplate = ({
   headerText,
   footerText,
   footerButtonLabel,
-  dividerLabel,
 }: Props) => {
   return (
     <S.Container>
       <S.TemplateFlex direction="column">
         <AuthHeader title={headerText} />
         <SignUpForm onSubmitSignUpForm={onSubmitSignUpForm} />
-        <Divider label={dividerLabel} />
+        <Divider label="OR" />
         <AuthSocials
           onClickFacebook={onClickFacebook}
           onClickGoogle={onClickGoogle}

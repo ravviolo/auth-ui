@@ -38,7 +38,6 @@ export const LoginPage = ({ onClick }: Props) => {
 
   return (
     <LoginTemplate
-      dividerLabel="OR"
       footerButtonLabel="Sign Up"
       footerText="Need an account?"
       headerText="Login"

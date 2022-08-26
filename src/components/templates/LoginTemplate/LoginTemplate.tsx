@@ -18,7 +18,6 @@ interface Props {
   headerText: string;
   footerText: string;
   footerButtonLabel: string;
-  dividerLabel: string;
 }
 
 export const LoginTemplate = ({
@@ -31,7 +30,6 @@ export const LoginTemplate = ({
   headerText,
   footerText,
   footerButtonLabel,
-  dividerLabel,
 }: Props) => {
   return (
     <S.Container>
@@ -41,7 +39,7 @@ export const LoginTemplate = ({
           onClickResetPassword={onClickResetPassword}
           onSubmitLoginForm={onSubmitLoginForm}
         />
-        <Divider label={dividerLabel} />
+        <Divider label="OR" />
         <AuthSocials
           onClickFacebook={onClickFacebook}
           onClickGoogle={onClickGoogle}

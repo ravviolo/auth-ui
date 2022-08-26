@@ -70,6 +70,7 @@
       }
     ],
     "react/require-default-props": "off",
+    "react/button-has-type": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "prettier/prettier": [
       "error",

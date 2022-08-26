@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import { LoginPage, SignUpPage } from 'pages';
-import { GlobalStyle } from 'theme';
 
 export const Router = () => {
   const [page, setPage] = useState<'login' | 'signup'>('login');
@@ -16,7 +15,6 @@ export const Router = () => {
 
   return (
     <>
-      <GlobalStyle />
       {page === 'login' && <LoginPage onClick={handleRouting} />}
       {page === 'signup' && <SignUpPage onClick={handleRouting} />}
     </>

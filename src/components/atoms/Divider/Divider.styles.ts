@@ -28,5 +28,4 @@ export const Badge = styled.span`
   text-transform: uppercase;
   border-radius: 5px;
   border: 1px solid ${colors.textLight};
-  font-family: 'Roboto', sans-serif;
 `;

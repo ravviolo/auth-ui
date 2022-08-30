@@ -15,4 +15,4 @@ export const Default: ComponentStory<typeof TextButton> = (args) => (
   <TextButton {...args} />
 );
 
-Default.storyName = 'Text Button';
+Default.storyName = 'TextButton';

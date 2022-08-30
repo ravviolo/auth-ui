@@ -5,9 +5,6 @@ import { Flex as FlexComponent } from 'components/atoms';
 export default {
   title: 'Atoms/Flex',
   component: FlexComponent,
-  argTypes: {
-    direction: { control: 'radio' },
-  },
   args: {
     children: Array(10)
       .fill(1)
@@ -26,6 +23,16 @@ export default {
   },
 } as ComponentMeta<typeof FlexComponent>;
 
-export const Flex: ComponentStory<typeof FlexComponent> = (args) => (
+const Template: ComponentStory<typeof FlexComponent> = (args) => (
   <FlexComponent {...args} />
 );
+
+export const Column = Template.bind({});
+Column.args = {
+  direction: 'column',
+};
+
+export const Row = Template.bind({});
+Row.args = {
+  direction: 'row',
+};

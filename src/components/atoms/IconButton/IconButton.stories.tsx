@@ -1,16 +1,17 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { IconButton as IconButtonComponent } from 'components/atoms';
+import { IconButton } from 'components/atoms';
 
 export default {
   title: 'Atoms/IconButton',
-  component: IconButtonComponent,
-} as ComponentMeta<typeof IconButtonComponent>;
+  component: IconButton,
+  args: {
+    icon: 'F',
+    type: 'button',
+  },
+} as ComponentMeta<typeof IconButton>;
 
-export const IconButton: ComponentStory<typeof IconButtonComponent> = (
-  args
-) => <IconButtonComponent {...args} />;
-IconButton.args = {
-  icon: 'F',
-  type: 'button',
-};
+export const Default: ComponentStory<typeof IconButton> = (args) => (
+  <IconButton {...args} />
+);
+Default.storyName = 'IconButton';

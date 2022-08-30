@@ -25,6 +25,8 @@ export const Badge = styled.span`
   color: ${colors.textLight};
   padding: 4px;
   font-size: 0.8rem;
+  text-transform: uppercase;
   border-radius: 5px;
   border: 1px solid ${colors.textLight};
+  font-family: 'Roboto', sans-serif;
 `;

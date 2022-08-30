@@ -5,14 +5,13 @@ import { Checkbox } from 'components/atoms';
 export default {
   title: 'Atoms/Checkbox',
   component: Checkbox,
+  args: {
+    id: 'testCheckbox',
+    name: 'testCheckbox',
+  },
 } as ComponentMeta<typeof Checkbox>;
 
-const Template: ComponentStory<typeof Checkbox> = (args) => (
+export const Default: ComponentStory<typeof Checkbox> = (args) => (
   <Checkbox {...args} />
 );
-
-export const Default = Template.bind({});
-Default.args = {
-  id: 'testCheckbox',
-  name: 'testCheckbox',
-};
+Default.storyName = 'Checkbox';

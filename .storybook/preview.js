@@ -12,4 +12,5 @@ export const parameters = {
     default: 'white',
     values: [{ name: 'white', value: '#ffffff' }],
   },
+  layout: 'centered',
 };

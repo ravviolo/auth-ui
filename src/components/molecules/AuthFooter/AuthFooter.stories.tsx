@@ -1,33 +1,12 @@
-import { action } from '@storybook/addon-actions';
-import { ComponentMeta, ComponentStory, DecoratorFn } from '@storybook/react';
-import { useEffect } from 'react';
-import { MemoryRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { AuthFooter } from 'components/molecules';
-
-const ReactRouterLoggerDecorator: DecoratorFn = (Story) => {
-  const location = useLocation();
-  useEffect(() => {
-    action('location')(location);
-  }, [location]);
-
-  return <Story />;
-};
-
-const reactRouterDecorator: DecoratorFn = (Story) => {
-  return (
-    <MemoryRouter>
-      <Routes>
-        <Route element={<Story />} path="/*" />
-      </Routes>
-    </MemoryRouter>
-  );
-};
+import { RouterDecorator, RouterLoggerDecorator } from 'storybook/decorators';
 
 export default {
   title: 'Molecules/AuthFooter',
   component: AuthFooter,
-  decorators: [ReactRouterLoggerDecorator, reactRouterDecorator],
+  decorators: [RouterLoggerDecorator, RouterDecorator],
   args: {
     linkHref: '/pathname',
     linkText: 'Link',

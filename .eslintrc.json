@@ -77,7 +77,8 @@
         "devDependencies": [
           "**/*.test.js",
           "**/*.stories.*",
-          "**/.storybook/**/*.*"
+          "**/.storybook/**/*.*",
+          "**/storybook/**/*.*"
         ],
         "peerDependencies": true
       }

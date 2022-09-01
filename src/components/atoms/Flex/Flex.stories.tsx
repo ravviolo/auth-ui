@@ -1,10 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { Flex as FlexComponent } from 'components/atoms';
+import { Flex } from 'components/atoms';
 
 export default {
   title: 'Atoms/Flex',
-  component: FlexComponent,
+  component: Flex,
   args: {
     children: Array(10)
       .fill(1)
@@ -21,11 +21,9 @@ export default {
         />
       )),
   },
-} as ComponentMeta<typeof FlexComponent>;
+} as ComponentMeta<typeof Flex>;
 
-const Template: ComponentStory<typeof FlexComponent> = (args) => (
-  <FlexComponent {...args} />
-);
+const Template: ComponentStory<typeof Flex> = (args) => <Flex {...args} />;
 
 export const Column = Template.bind({});
 Column.args = {

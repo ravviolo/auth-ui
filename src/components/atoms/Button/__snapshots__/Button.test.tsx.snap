@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button matches snapshot 1`] = `
+<button
+  className="sc-bczRLJ jXOWFG"
+  data-testid="test-btn"
+  onClick={[MockFunction]}
+  type="button"
+>
+  Test Button
+</button>
+`;

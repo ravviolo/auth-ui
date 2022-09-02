@@ -1,9 +1,10 @@
 import * as S from './Heading.styles';
 
-interface Props {
+export interface Props {
   title: string;
+  testId: string;
 }
 
-export const Heading = ({ title }: Props) => {
-  return <S.Heading>{title}</S.Heading>;
+export const Heading = ({ title, testId }: Props) => {
+  return <S.Heading data-testid={testId}>{title}</S.Heading>;
 };

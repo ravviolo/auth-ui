@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider matches snapshot with badge 1`] = `
+<div
+  className="sc-dkzDqf fBSlBa"
+  data-testid="test-divider"
+>
+  <div
+    className="sc-hKMtZM cJojKy"
+  />
+  <span
+    className="sc-eCYdqJ fGmLST"
+  >
+    Badge
+  </span>
+</div>
+`;
+
+exports[`Divider matches snapshot without badge 1`] = `
+<div
+  className="sc-dkzDqf fBSlBa"
+  data-testid="test-divider"
+>
+  <div
+    className="sc-hKMtZM cJojKy"
+  />
+</div>
+`;

@@ -14,7 +14,13 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, Props>(
     return (
       <S.InputContainer direction="column" testId="flex-password-input">
         <InputLabel htmlFor={id} label="Password" />
-        <InputField ref={ref} id={id} name={name} type="password" />
+        <InputField
+          ref={ref}
+          id={id}
+          name={name}
+          testId="input-field-password"
+          type="password"
+        />
       </S.InputContainer>
     );
   }

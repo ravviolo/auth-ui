@@ -14,10 +14,10 @@ interface Props {
   onClickFacebook: () => void;
   onClickLinkedIn: () => void;
   onClickResetPassword: () => void;
+  onClickFooterBtn: () => void;
   headerText: string;
   footerText: string;
-  footerLinkText: string;
-  footerLinkHref: string;
+  footerBtnText: string;
 }
 
 export const LoginTemplate = ({
@@ -26,10 +26,10 @@ export const LoginTemplate = ({
   onClickGoogle,
   onClickLinkedIn,
   onClickResetPassword,
+  onClickFooterBtn,
   headerText,
   footerText,
-  footerLinkText,
-  footerLinkHref,
+  footerBtnText,
 }: Props) => {
   return (
     <S.Container>
@@ -46,9 +46,9 @@ export const LoginTemplate = ({
           onClickLinkedIn={onClickLinkedIn}
         />
         <AuthFooter
-          linkHref={footerLinkHref}
-          linkText={footerLinkText}
+          btnText={footerBtnText}
           text={footerText}
+          onClick={onClickFooterBtn}
         />
       </S.TemplateFlex>
     </S.Container>

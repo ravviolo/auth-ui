@@ -1,7 +1,11 @@
 /* eslint-disable no-console */
+import { useNavigate } from 'react-router-dom';
+
 import { SignUpTemplate } from 'components/templates';
 
 export const SignUpPage = () => {
+  const navigate = useNavigate();
+
   const handleSignUpFormSubmit = (email: string, password: string): void => {
     const userCredentials = {
       email,
@@ -23,13 +27,17 @@ export const SignUpPage = () => {
     console.log('Registering user via Facebook');
   };
 
+  const handleNavigate = (): void => {
+    navigate('/login');
+  };
+
   return (
     <SignUpTemplate
-      footerLinkHref="/login"
-      footerLinkText="Login"
+      footerBtnText="Login"
       footerText="Already a user?"
       headerText="Sign Up"
       onClickFacebook={handleSignUpViaFacebook}
+      onClickFooterBtn={handleNavigate}
       onClickGoogle={handleSignUpViaGoogle}
       onClickLinkedIn={handleSignUpViaLinkedIn}
       onSubmitSignUpForm={handleSignUpFormSubmit}

@@ -9,10 +9,10 @@ interface Props {
   onClickGoogle: () => void;
   onClickFacebook: () => void;
   onClickLinkedIn: () => void;
+  onClickFooterBtn: () => void;
   headerText: string;
   footerText: string;
-  footerLinkText: string;
-  footerLinkHref: string;
+  footerBtnText: string;
 }
 
 export const SignUpTemplate = ({
@@ -20,10 +20,10 @@ export const SignUpTemplate = ({
   onClickFacebook,
   onClickGoogle,
   onClickLinkedIn,
+  onClickFooterBtn,
   headerText,
   footerText,
-  footerLinkText,
-  footerLinkHref,
+  footerBtnText,
 }: Props) => {
   return (
     <S.Container>
@@ -37,9 +37,9 @@ export const SignUpTemplate = ({
           onClickLinkedIn={onClickLinkedIn}
         />
         <AuthFooter
-          linkHref={footerLinkHref}
-          linkText={footerLinkText}
+          btnText={footerBtnText}
           text={footerText}
+          onClick={onClickFooterBtn}
         />
       </S.TemplateFlex>
     </S.Container>

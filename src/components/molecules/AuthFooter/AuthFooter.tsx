@@ -2,16 +2,16 @@ import * as S from './AuthFooter.styles';
 
 interface Props {
   text: string;
-  linkText: string;
-  linkHref: string;
+  btnText: string;
+  onClick: () => void;
 }
 
-export const AuthFooter = ({ linkText, linkHref, text }: Props) => {
+export const AuthFooter = ({ btnText, onClick, text }: Props) => {
   return (
     <S.Footer>
       <S.FooterFlex direction="row">
         <p>{text}</p>
-        <S.FooterLink to={linkHref}>{linkText}</S.FooterLink>
+        <S.FooterBtn label={btnText} type="button" onClick={onClick} />
       </S.FooterFlex>
     </S.Footer>
   );

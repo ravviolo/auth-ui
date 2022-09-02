@@ -1,7 +1,11 @@
 /* eslint-disable no-console */
+import { useNavigate } from 'react-router-dom';
+
 import { LoginTemplate } from 'components/templates';
 
 export const LoginPage = () => {
+  const navigate = useNavigate();
+
   const handleLoginFormSubmit = (
     email: string,
     password: string,
@@ -32,13 +36,17 @@ export const LoginPage = () => {
     console.log('Reset password');
   };
 
+  const handleNavigate = (): void => {
+    navigate('/signup');
+  };
+
   return (
     <LoginTemplate
-      footerLinkHref="/signup"
-      footerLinkText="Sign Up"
+      footerBtnText="Sign Up"
       footerText="Need an account?"
       headerText="Login"
       onClickFacebook={handleLoginViaFacebook}
+      onClickFooterBtn={handleNavigate}
       onClickGoogle={handleLoginViaGoogle}
       onClickLinkedIn={handleLoginViaLinkedIn}
       onClickResetPassword={handleResetPassword}

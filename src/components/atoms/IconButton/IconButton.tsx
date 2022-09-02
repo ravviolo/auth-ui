@@ -1,9 +1,10 @@
 import * as S from './IconButton.styles';
 
-interface Props {
+export interface Props {
   icon: string;
   type: 'button' | 'submit' | 'reset';
   color: string;
+  testId: string;
   className?: string;
   onClick?: () => void;
 }
@@ -11,6 +12,7 @@ interface Props {
 export const IconButton = ({
   icon,
   color,
+  testId,
   className,
   type = 'button',
   onClick,
@@ -19,6 +21,7 @@ export const IconButton = ({
     <S.IconButton
       className={className}
       color={color}
+      data-testid={testId}
       type={type}
       onClick={onClick}
     >

@@ -11,7 +11,12 @@ export const AuthFooter = ({ btnText, onClick, text }: Props) => {
     <S.Footer>
       <S.FooterFlex direction="row" testId="flex-footer">
         <p>{text}</p>
-        <S.FooterBtn label={btnText} type="button" onClick={onClick} />
+        <S.FooterBtn
+          label={btnText}
+          testId="btn-footer"
+          type="button"
+          onClick={onClick}
+        />
       </S.FooterFlex>
     </S.Footer>
   );

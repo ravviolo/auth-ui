@@ -64,6 +64,7 @@ export const LoginForm = ({
 
         <S.ResetPasswordButton
           label="Forgot Password?"
+          testId="btn-reset-password"
           type="button"
           onClick={onClickResetPassword}
         />

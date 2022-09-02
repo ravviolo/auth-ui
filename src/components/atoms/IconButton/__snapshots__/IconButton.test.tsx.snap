@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton matches snapshot 1`] = `
+<button
+  className="sc-iBkjds fegfkl"
+  color="cyan"
+  data-testid="test-icon-btn"
+  onClick={[MockFunction]}
+  type="button"
+>
+  F
+</button>
+`;

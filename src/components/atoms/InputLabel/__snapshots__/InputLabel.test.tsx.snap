@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputLabel matches snapshot 1`] = `
+<label
+  className="sc-papXJ daxRFt"
+  data-testid="test-input-label"
+  htmlFor="test-input-label"
+>
+  Test Input
+</label>
+`;

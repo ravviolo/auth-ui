@@ -24,7 +24,7 @@ describe('Button', () => {
     expect(btn).toHaveTextContent('Test Button');
   });
 
-  it('handles click events', async () => {
+  it('handles click event, fires event handler once', async () => {
     render(<Button {...Props} />);
 
     const btn = screen.getByTestId('test-btn');

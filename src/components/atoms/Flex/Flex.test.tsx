@@ -18,7 +18,7 @@ describe('Flex', () => {
       )),
   };
 
-  it.only('renders all children horizontally', () => {
+  it('renders all children horizontally', () => {
     render(<Flex {...props} direction="row" />);
 
     const flexContainer = screen.getByTestId('test-flex');

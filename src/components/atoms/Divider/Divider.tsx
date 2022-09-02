@@ -1,12 +1,13 @@
 import * as S from './Divider.styles';
 
-interface Props {
+export interface Props {
   label?: string;
+  testId: string;
 }
 
-export const Divider = ({ label }: Props) => {
+export const Divider = ({ label, testId }: Props) => {
   return (
-    <S.Container>
+    <S.Container data-testid={testId}>
       <S.Line />
       {label && <S.Badge>{label}</S.Badge>}
     </S.Container>

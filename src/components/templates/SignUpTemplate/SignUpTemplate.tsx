@@ -30,7 +30,7 @@ export const SignUpTemplate = ({
       <S.TemplateFlex direction="column">
         <AuthHeader title={headerText} />
         <SignUpForm onSubmitSignUpForm={onSubmitSignUpForm} />
-        <Divider label="OR" />
+        <Divider label="OR" testId="divider-signup" />
         <AuthSocials
           onClickFacebook={onClickFacebook}
           onClickGoogle={onClickGoogle}

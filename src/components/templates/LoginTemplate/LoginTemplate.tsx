@@ -39,7 +39,7 @@ export const LoginTemplate = ({
           onClickResetPassword={onClickResetPassword}
           onSubmitLoginForm={onSubmitLoginForm}
         />
-        <Divider label="OR" />
+        <Divider label="OR" testId="divider-login" />
         <AuthSocials
           onClickFacebook={onClickFacebook}
           onClickGoogle={onClickGoogle}

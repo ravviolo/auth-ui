@@ -53,7 +53,11 @@ export const LoginForm = ({
               name="rememberPassword"
               testId="remember-password-checkbox"
             />
-            <InputLabel htmlFor="rememberPassword" label="Remember me?" />
+            <InputLabel
+              htmlFor="rememberPassword"
+              label="Remember me?"
+              testId="input-label-remember-password-checkbox"
+            />
           </S.CheckboxContainer>
         </S.PasswordControl>
         <Button label="Login" testId="login-btn" type="submit" />

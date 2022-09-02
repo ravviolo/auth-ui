@@ -13,7 +13,7 @@ export const EmailInput = React.forwardRef<HTMLInputElement, Props>(
   ({ id, name }, ref) => {
     return (
       <S.InputContainer direction="column" testId="flex-email-input">
-        <InputLabel htmlFor={id} label="Email" />
+        <InputLabel htmlFor={id} label="Email" testId="input-label-email" />
         <InputField
           ref={ref}
           id={id}

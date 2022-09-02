@@ -8,6 +8,10 @@ export default {
   args: {
     icon: 'F',
     type: 'button',
+    color: 'cyan',
+  },
+  argTypes: {
+    color: { control: 'color' },
   },
 } as ComponentMeta<typeof IconButton>;
 

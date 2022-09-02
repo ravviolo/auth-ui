@@ -1,3 +1,5 @@
+import { IconButton } from 'components/atoms';
+
 import * as S from './AuthSocials.styles';
 
 interface Props {
@@ -42,7 +44,7 @@ export const AuthSocials = ({
   return (
     <S.Container direction="row">
       {authSocials.map(({ color, icon, name, onClickHandler }) => (
-        <S.AuthSocialButton
+        <IconButton
           key={name}
           color={color}
           icon={icon}

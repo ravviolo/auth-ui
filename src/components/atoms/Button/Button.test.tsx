@@ -31,7 +31,7 @@ describe('Button', () => {
 
     await userEvent.click(btn);
 
-    expect(mockOnClick).toBeCalledTimes(1);
+    expect(mockOnClick).toHaveBeenCalledTimes(1);
   });
 
   it('matches snapshot', () => {

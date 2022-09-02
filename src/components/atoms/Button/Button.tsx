@@ -1,14 +1,15 @@
 import * as S from './Button.styles';
 
-interface Props {
+export interface Props {
   label: string;
   type: 'button' | 'submit' | 'reset';
+  testId: string;
   onClick?: () => void;
 }
 
-export const Button = ({ label, type = 'button', onClick }: Props) => {
+export const Button = ({ label, type = 'button', testId, onClick }: Props) => {
   return (
-    <S.Button type={type} onClick={onClick}>
+    <S.Button data-testid={testId} type={type} onClick={onClick}>
       {label}
     </S.Button>
   );

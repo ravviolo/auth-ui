@@ -27,7 +27,7 @@ export const SignUpTemplate = ({
 }: Props) => {
   return (
     <S.Container>
-      <S.TemplateFlex direction="column">
+      <S.TemplateFlex direction="column" testId="flex-signup-template">
         <AuthHeader title={headerText} />
         <SignUpForm onSubmitSignUpForm={onSubmitSignUpForm} />
         <Divider label="OR" testId="divider-signup" />

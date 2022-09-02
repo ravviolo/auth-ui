@@ -42,7 +42,7 @@ export const AuthSocials = ({
   ];
 
   return (
-    <S.Container direction="row">
+    <S.Container direction="row" testId="flex-auth-socials">
       {authSocials.map(({ color, icon, name, onClickHandler }) => (
         <IconButton
           key={name}

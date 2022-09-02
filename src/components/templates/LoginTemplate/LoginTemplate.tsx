@@ -33,7 +33,7 @@ export const LoginTemplate = ({
 }: Props) => {
   return (
     <S.Container>
-      <S.TemplateFlex direction="column">
+      <S.TemplateFlex direction="column" testId="flex-login-template">
         <AuthHeader title={headerText} />
         <LoginForm
           onClickResetPassword={onClickResetPassword}

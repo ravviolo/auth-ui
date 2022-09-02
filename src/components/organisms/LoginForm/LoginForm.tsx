@@ -36,11 +36,17 @@ export const LoginForm = ({
 
   return (
     <form onSubmit={handleLogin}>
-      <S.Container direction="column">
+      <S.Container direction="column" testId="flex-login-form">
         <EmailInput ref={emailRef} id="email" name="email" />
-        <S.PasswordControl direction="column">
+        <S.PasswordControl
+          direction="column"
+          testId="flex-login-form-password-control"
+        >
           <PasswordInput ref={passwordRef} id="password" name="password" />
-          <S.CheckboxContainer direction="row">
+          <S.CheckboxContainer
+            direction="row"
+            testId="flex-login-form-checkbox"
+          >
             <Checkbox
               ref={rememberPasswordRef}
               id="rememberPassword"

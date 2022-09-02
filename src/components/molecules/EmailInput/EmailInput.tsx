@@ -12,7 +12,7 @@ interface Props {
 export const EmailInput = React.forwardRef<HTMLInputElement, Props>(
   ({ id, name }, ref) => {
     return (
-      <S.InputContainer direction="column">
+      <S.InputContainer direction="column" testId="flex-email-input">
         <InputLabel htmlFor={id} label="Email" />
         <InputField ref={ref} id={id} name={name} type="email" />
       </S.InputContainer>

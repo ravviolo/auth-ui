@@ -22,3 +22,6 @@ jobs:
 
       - name: Code Linting
         run: npm run lint
+
+      - name: Fix lint warnings
+        run: npm run lint:fix

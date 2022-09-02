@@ -45,6 +45,7 @@ export const LoginForm = ({
               ref={rememberPasswordRef}
               id="rememberPassword"
               name="rememberPassword"
+              testId="remember-password-checkbox"
             />
             <InputLabel htmlFor="rememberPassword" label="Remember me?" />
           </S.CheckboxContainer>

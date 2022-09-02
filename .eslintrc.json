@@ -21,7 +21,6 @@
     }
   },
   "ignorePatterns": ["node_modules/*"],
-
   "extends": [
     "eslint:recommended",
     "airbnb",
@@ -32,9 +31,19 @@
     "plugin:react/jsx-runtime",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:import/recommended",
+    "plugin:jest-dom/recommended",
     "plugin:prettier/recommended"
   ],
   "plugins": ["react", "@typescript-eslint"],
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
   "rules": {
     "no-console": "warn",
     "import/order": [
@@ -83,6 +92,7 @@
         "peerDependencies": true
       }
     ],
+    "@typescript-eslint/await-thenable": "off",
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "prettier/prettier": [

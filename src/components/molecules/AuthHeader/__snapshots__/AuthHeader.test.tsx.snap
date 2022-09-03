@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthHeader matches snapshot 1`] = `
+<header
+  data-testid="test-auth-header"
+>
+  <h1
+    className="sc-gKXOVf zAjwy"
+    data-testid="auth-heading"
+  >
+    Test Header Title
+  </h1>
+</header>
+`;

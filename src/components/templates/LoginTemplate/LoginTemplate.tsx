@@ -47,6 +47,7 @@ export const LoginTemplate = ({
         />
         <AuthFooter
           btnText={footerBtnText}
+          testId="auth-footer-login-template"
           text={footerText}
           onClick={onClickFooterBtn}
         />

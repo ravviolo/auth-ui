@@ -38,6 +38,7 @@ export const SignUpTemplate = ({
         />
         <AuthFooter
           btnText={footerBtnText}
+          testId="auth-footer-signup-template"
           text={footerText}
           onClick={onClickFooterBtn}
         />

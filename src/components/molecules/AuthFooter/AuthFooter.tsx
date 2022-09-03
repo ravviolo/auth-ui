@@ -1,14 +1,15 @@
 import * as S from './AuthFooter.styles';
 
-interface Props {
+export interface Props {
   text: string;
   btnText: string;
+  testId: string;
   onClick: () => void;
 }
 
-export const AuthFooter = ({ btnText, onClick, text }: Props) => {
+export const AuthFooter = ({ btnText, testId, onClick, text }: Props) => {
   return (
-    <S.Footer>
+    <S.Footer data-testid={testId}>
       <S.FooterFlex direction="row" testId="flex-footer">
         <p>{text}</p>
         <S.FooterBtn

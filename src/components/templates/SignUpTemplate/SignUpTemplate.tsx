@@ -28,7 +28,7 @@ export const SignUpTemplate = ({
   return (
     <S.Container>
       <S.TemplateFlex direction="column" testId="flex-signup-template">
-        <AuthHeader title={headerText} />
+        <AuthHeader testId="auth-header-signup-template" title={headerText} />
         <SignUpForm onSubmitSignUpForm={onSubmitSignUpForm} />
         <Divider label="OR" testId="divider-signup" />
         <AuthSocials

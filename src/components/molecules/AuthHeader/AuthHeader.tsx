@@ -1,12 +1,13 @@
 import { Heading } from 'components/atoms';
 
-interface Props {
+export interface Props {
   title: string;
+  testId: string;
 }
 
-export const AuthHeader = ({ title }: Props) => {
+export const AuthHeader = ({ title, testId }: Props) => {
   return (
-    <header>
+    <header data-testid={testId}>
       <Heading testId="auth-heading" title={title} />
     </header>
   );

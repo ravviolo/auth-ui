@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthFooter matches snapshot 1`] = `
+<footer
+  className="sc-kDDrLX kktpMP"
+  data-testid="test-auth-footer"
+>
+  <div
+    className="sc-jSMfEi iChCMC sc-crXcEl bUmuaF"
+    data-testid="flex-footer"
+    direction="row"
+  >
+    <p>
+      Footer Text
+    </p>
+    <button
+      className="sc-jqUVSM ebpvV sc-iqcoie bPYbbt"
+      data-testid="btn-footer"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Footer Button
+    </button>
+  </div>
+</footer>
+`;

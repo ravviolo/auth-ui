@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmailInput matches snapshot 1`] = `
+<div
+  className="sc-jSMfEi bQrDqy sc-breuTD jjaaRC"
+  data-testid="test-email-input"
+  direction="column"
+>
+  <label
+    className="sc-papXJ daxRFt"
+    data-testid="input-label-email"
+    htmlFor="test-email"
+  >
+    Email
+  </label>
+  <input
+    className="sc-ftvSup dLJLzu"
+    data-testid="input-field-email"
+    id="test-email"
+    name="test-email"
+    type="email"
+  />
+</div>
+`;

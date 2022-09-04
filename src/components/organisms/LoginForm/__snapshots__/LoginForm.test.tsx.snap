@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm matches snapshot 1`] = `
+<form
+  data-testid="test-login-form"
+  onSubmit={[Function]}
+>
+  <div
+    className="sc-jSMfEi bQrDqy sc-hAZoDl bWsHpL"
+    data-testid="flex-login-form"
+    direction="column"
+  >
+    <div
+      className="sc-jSMfEi bQrDqy sc-breuTD jjaaRC"
+      data-testid="email-input-login-form"
+      direction="column"
+    >
+      <label
+        className="sc-papXJ daxRFt"
+        data-testid="input-label-email"
+        htmlFor="email"
+      >
+        Email
+      </label>
+      <input
+        className="sc-ftvSup dLJLzu"
+        data-testid="input-field-email"
+        id="email"
+        name="email"
+        type="email"
+      />
+    </div>
+    <div
+      className="sc-jSMfEi bQrDqy sc-fnykZs hELmKH"
+      data-testid="flex-login-form-password-control"
+      direction="column"
+    >
+      <div
+        className="sc-jSMfEi bQrDqy sc-ksZaOG cRa-dNN"
+        data-testid="password-input-login-form"
+        direction="column"
+      >
+        <label
+          className="sc-papXJ daxRFt"
+          data-testid="input-label-password"
+          htmlFor="password"
+        >
+          Password
+        </label>
+        <input
+          className="sc-ftvSup dLJLzu"
+          data-testid="input-field-password"
+          id="password"
+          name="password"
+          type="password"
+        />
+      </div>
+      <div
+        className="sc-jSMfEi iChCMC sc-fEOsli dPSjkT"
+        data-testid="flex-login-form-checkbox"
+        direction="row"
+      >
+        <input
+          className="sc-gsnTZi kVuJZl"
+          data-testid="remember-password-checkbox"
+          id="rememberPassword"
+          name="rememberPassword"
+          type="checkbox"
+        />
+        <label
+          className="sc-papXJ daxRFt"
+          data-testid="input-label-remember-password-checkbox"
+          htmlFor="rememberPassword"
+        >
+          Remember me?
+        </label>
+      </div>
+    </div>
+    <button
+      className="sc-bczRLJ jXOWFG"
+      data-testid="btn-submit-login"
+      type="submit"
+    >
+      Login
+    </button>
+    <button
+      className="sc-jqUVSM ebpvV sc-bjUoiL hqHESO"
+      data-testid="btn-reset-password"
+      onClick={[MockFunction]}
+      type="button"
+    >
+      Forgot Password?
+    </button>
+  </div>
+</form>
+`;

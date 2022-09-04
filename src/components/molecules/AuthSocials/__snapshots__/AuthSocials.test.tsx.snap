@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthSocials matches snapshot 1`] = `
+<div
+  className="sc-jSMfEi iChCMC sc-evZas fBPmfS"
+  data-testid="test-auth-socials"
+  direction="row"
+>
+  <button
+    className="sc-iBkjds cxbDaZ"
+    color="#DB4437"
+    data-testid="icon-btn-Google"
+    onClick={[MockFunction]}
+    type="button"
+  >
+    G
+  </button>
+  <button
+    className="sc-iBkjds bqhZzF"
+    color="#4267B2"
+    data-testid="icon-btn-Facebook"
+    onClick={[MockFunction]}
+    type="button"
+  >
+    f
+  </button>
+  <button
+    className="sc-iBkjds hAqsSt"
+    color="#0077B5"
+    data-testid="icon-btn-LinkedIn"
+    onClick={[MockFunction]}
+    type="button"
+  >
+    in
+  </button>
+</div>
+`;

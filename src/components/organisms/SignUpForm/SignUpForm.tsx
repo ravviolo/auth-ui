@@ -32,7 +32,12 @@ export const SignUpForm = ({ onSubmitSignUpForm }: Props) => {
           name="email"
           testId="email-input-signup-form"
         />
-        <PasswordInput ref={passwordRef} id="password" name="password" />
+        <PasswordInput
+          ref={passwordRef}
+          id="password"
+          name="password"
+          testId="password-input-signup-form"
+        />
         <Button label="Sign Up" testId="signup-btn" type="submit" />
       </S.Container>
     </form>

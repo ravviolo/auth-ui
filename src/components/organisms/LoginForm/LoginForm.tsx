@@ -47,7 +47,12 @@ export const LoginForm = ({
           direction="column"
           testId="flex-login-form-password-control"
         >
-          <PasswordInput ref={passwordRef} id="password" name="password" />
+          <PasswordInput
+            ref={passwordRef}
+            id="password"
+            name="password"
+            testId="password-input-login-form"
+          />
           <S.CheckboxContainer
             direction="row"
             testId="flex-login-form-checkbox"

@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUpForm matches snapshot 1`] = `
+<form
+  data-testid="test-signup-form"
+  onSubmit={[Function]}
+>
+  <div
+    className="sc-jSMfEi bQrDqy sc-idiyUo wwKtw"
+    data-testid="flex-signup-form"
+    direction="column"
+  >
+    <div
+      className="sc-jSMfEi bQrDqy sc-breuTD jjaaRC"
+      data-testid="email-input-signup-form"
+      direction="column"
+    >
+      <label
+        className="sc-papXJ daxRFt"
+        data-testid="input-label-email"
+        htmlFor="email"
+      >
+        Email
+      </label>
+      <input
+        className="sc-ftvSup dLJLzu"
+        data-testid="input-field-email"
+        id="email"
+        name="email"
+        type="email"
+      />
+    </div>
+    <div
+      className="sc-jSMfEi bQrDqy sc-ksZaOG cRa-dNN"
+      data-testid="password-input-signup-form"
+      direction="column"
+    >
+      <label
+        className="sc-papXJ daxRFt"
+        data-testid="input-label-password"
+        htmlFor="password"
+      >
+        Password
+      </label>
+      <input
+        className="sc-ftvSup dLJLzu"
+        data-testid="input-field-password"
+        id="password"
+        name="password"
+        type="password"
+      />
+    </div>
+    <button
+      className="sc-bczRLJ jXOWFG"
+      data-testid="btn-submit-signup"
+      type="submit"
+    >
+      Sign Up
+    </button>
+  </div>
+</form>
+`;

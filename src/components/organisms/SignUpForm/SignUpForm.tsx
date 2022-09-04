@@ -5,11 +5,12 @@ import { EmailInput, PasswordInput } from 'components/molecules';
 
 import * as S from './SignUpForm.styles';
 
-interface Props {
+export interface Props {
+  testId: string;
   onSubmitSignUpForm: (email: string, password: string) => void;
 }
 
-export const SignUpForm = ({ onSubmitSignUpForm }: Props) => {
+export const SignUpForm = ({ testId, onSubmitSignUpForm }: Props) => {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
@@ -24,7 +25,7 @@ export const SignUpForm = ({ onSubmitSignUpForm }: Props) => {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form data-testid={testId} onSubmit={handleSubmit}>
       <S.Container direction="column" testId="flex-signup-form">
         <EmailInput
           ref={emailRef}
@@ -38,7 +39,7 @@ export const SignUpForm = ({ onSubmitSignUpForm }: Props) => {
           name="password"
           testId="password-input-signup-form"
         />
-        <Button label="Sign Up" testId="signup-btn" type="submit" />
+        <Button label="Sign Up" testId="btn-submit-signup" type="submit" />
       </S.Container>
     </form>
   );

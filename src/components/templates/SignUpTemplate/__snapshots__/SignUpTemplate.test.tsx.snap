@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUpTemplate matches snapshot 1`] = `
+<main
+  className="sc-dmRaPn dQxFcV"
+  data-testid="test-signup-template"
+>
+  <div
+    className="sc-jSMfEi bQrDqy sc-kgflAQ iSfrTS"
+    data-testid="flex-signup-template"
+    direction="column"
+  >
+    <header
+      data-testid="auth-header-signup-template"
+    >
+      <h1
+        className="sc-gKXOVf zAjwy"
+        data-testid="auth-heading"
+      >
+        SignUp Header
+      </h1>
+    </header>
+    <form
+      data-testid="signup-form"
+      onSubmit={[Function]}
+    >
+      <div
+        className="sc-jSMfEi bQrDqy sc-idiyUo wwKtw"
+        data-testid="flex-signup-form"
+        direction="column"
+      >
+        <div
+          className="sc-jSMfEi bQrDqy sc-breuTD jjaaRC"
+          data-testid="email-input-signup-form"
+          direction="column"
+        >
+          <label
+            className="sc-papXJ daxRFt"
+            data-testid="input-label-email"
+            htmlFor="email"
+          >
+            Email
+          </label>
+          <input
+            className="sc-ftvSup dLJLzu"
+            data-testid="input-field-email"
+            id="email"
+            name="email"
+            type="email"
+          />
+        </div>
+        <div
+          className="sc-jSMfEi bQrDqy sc-ksZaOG cRa-dNN"
+          data-testid="password-input-signup-form"
+          direction="column"
+        >
+          <label
+            className="sc-papXJ daxRFt"
+            data-testid="input-label-password"
+            htmlFor="password"
+          >
+            Password
+          </label>
+          <input
+            className="sc-ftvSup dLJLzu"
+            data-testid="input-field-password"
+            id="password"
+            name="password"
+            type="password"
+          />
+        </div>
+        <button
+          className="sc-bczRLJ jXOWFG"
+          data-testid="btn-submit-signup"
+          type="submit"
+        >
+          Sign Up
+        </button>
+      </div>
+    </form>
+    <div
+      className="sc-dkzDqf fBSlBa"
+      data-testid="divider-signup"
+    >
+      <div
+        className="sc-hKMtZM cJojKy"
+      />
+      <span
+        className="sc-eCYdqJ fGmLST"
+      >
+        OR
+      </span>
+    </div>
+    <div
+      className="sc-jSMfEi iChCMC sc-evZas fBPmfS"
+      data-testid="auth-socials-signup-template"
+      direction="row"
+    >
+      <button
+        className="sc-iBkjds cxbDaZ"
+        color="#DB4437"
+        data-testid="icon-btn-Google"
+        onClick={[MockFunction]}
+        type="button"
+      >
+        G
+      </button>
+      <button
+        className="sc-iBkjds bqhZzF"
+        color="#4267B2"
+        data-testid="icon-btn-Facebook"
+        onClick={[MockFunction]}
+        type="button"
+      >
+        f
+      </button>
+      <button
+        className="sc-iBkjds hAqsSt"
+        color="#0077B5"
+        data-testid="icon-btn-LinkedIn"
+        onClick={[MockFunction]}
+        type="button"
+      >
+        in
+      </button>
+    </div>
+    <footer
+      className="sc-kDDrLX kktpMP"
+      data-testid="auth-footer-signup-template"
+    >
+      <div
+        className="sc-jSMfEi iChCMC sc-crXcEl bUmuaF"
+        data-testid="flex-footer"
+        direction="row"
+      >
+        <p>
+          SignUp Footer
+        </p>
+        <button
+          className="sc-jqUVSM ebpvV sc-iqcoie bPYbbt"
+          data-testid="btn-footer"
+          onClick={[MockFunction]}
+          type="button"
+        >
+          SignUp Footer Button
+        </button>
+      </div>
+    </footer>
+  </div>
+</main>
+`;

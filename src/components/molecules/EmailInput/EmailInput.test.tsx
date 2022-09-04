@@ -13,7 +13,7 @@ describe('EmailInput', () => {
     testId: 'test-email-input',
   };
 
-  it('renders input with field and label', () => {
+  it('renders empty input of type email with Email as label', () => {
     render(<EmailInput {...props} />);
 
     const emailInput = screen.getByTestId('test-email-input');
@@ -23,6 +23,7 @@ describe('EmailInput', () => {
 
     expect(emailInputLabel).toHaveTextContent('Email');
     expect(emailInputField).toHaveValue('');
+    expect(emailInputField).toHaveAttribute('type', 'email');
   });
 
   it('displays entered text', async () => {

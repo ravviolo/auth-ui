@@ -13,7 +13,7 @@ describe('PasswordInput', () => {
     testId: 'test-password-input',
   };
 
-  it('renders input with field and label', () => {
+  it('renders empty input of type password with Password as label', () => {
     render(<PasswordInput {...props} />);
 
     const passwordInput = screen.getByTestId('test-password-input');
@@ -27,6 +27,7 @@ describe('PasswordInput', () => {
 
     expect(passwordInputLabel).toHaveTextContent('Password');
     expect(passwordInputField).toHaveValue('');
+    expect(passwordInputField).toHaveAttribute('type', 'password');
   });
 
   it('displays entered text', async () => {

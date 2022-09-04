@@ -4,7 +4,7 @@ import { SignUpForm } from 'components/organisms';
 
 import * as S from './SignUpTemplate.styles';
 
-interface Props {
+export interface Props {
   onSubmitSignUpForm: (email: string, password: string) => void;
   onClickGoogle: () => void;
   onClickFacebook: () => void;
@@ -13,6 +13,7 @@ interface Props {
   headerText: string;
   footerText: string;
   footerBtnText: string;
+  testId: string;
 }
 
 export const SignUpTemplate = ({
@@ -24,9 +25,10 @@ export const SignUpTemplate = ({
   headerText,
   footerText,
   footerBtnText,
+  testId,
 }: Props) => {
   return (
-    <S.Container>
+    <S.Container data-testid={testId}>
       <S.TemplateFlex direction="column" testId="flex-signup-template">
         <AuthHeader testId="auth-header-signup-template" title={headerText} />
         <SignUpForm

@@ -4,15 +4,16 @@ import { InputField, InputLabel } from 'components/atoms';
 
 import * as S from './EmailInput.styles';
 
-interface Props {
+export interface Props {
   id: string;
   name: string;
+  testId: string;
 }
 
 export const EmailInput = React.forwardRef<HTMLInputElement, Props>(
-  ({ id, name }, ref) => {
+  ({ id, name, testId }, ref) => {
     return (
-      <S.InputContainer direction="column" testId="flex-email-input">
+      <S.InputContainer direction="column" testId={testId}>
         <InputLabel htmlFor={id} label="Email" testId="input-label-email" />
         <InputField
           ref={ref}

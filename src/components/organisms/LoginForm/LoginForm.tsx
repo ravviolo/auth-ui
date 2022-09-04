@@ -37,7 +37,12 @@ export const LoginForm = ({
   return (
     <form onSubmit={handleLogin}>
       <S.Container direction="column" testId="flex-login-form">
-        <EmailInput ref={emailRef} id="email" name="email" />
+        <EmailInput
+          ref={emailRef}
+          id="email"
+          name="email"
+          testId="email-input-login-form"
+        />
         <S.PasswordControl
           direction="column"
           testId="flex-login-form-password-control"

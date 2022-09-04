@@ -26,7 +26,12 @@ export const SignUpForm = ({ onSubmitSignUpForm }: Props) => {
   return (
     <form onSubmit={handleSubmit}>
       <S.Container direction="column" testId="flex-signup-form">
-        <EmailInput ref={emailRef} id="email" name="email" />
+        <EmailInput
+          ref={emailRef}
+          id="email"
+          name="email"
+          testId="email-input-signup-form"
+        />
         <PasswordInput ref={passwordRef} id="password" name="password" />
         <Button label="Sign Up" testId="signup-btn" type="submit" />
       </S.Container>

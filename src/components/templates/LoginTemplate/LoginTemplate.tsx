@@ -4,7 +4,7 @@ import { LoginForm } from 'components/organisms';
 
 import * as S from './LoginTemplate.styles';
 
-interface Props {
+export interface Props {
   onSubmitLoginForm: (
     email: string,
     password: string,
@@ -18,6 +18,7 @@ interface Props {
   headerText: string;
   footerText: string;
   footerBtnText: string;
+  testId: string;
 }
 
 export const LoginTemplate = ({
@@ -30,9 +31,10 @@ export const LoginTemplate = ({
   headerText,
   footerText,
   footerBtnText,
+  testId,
 }: Props) => {
   return (
-    <S.Container>
+    <S.Container data-testid={testId}>
       <S.TemplateFlex direction="column" testId="flex-login-template">
         <AuthHeader testId="auth-header-login-template" title={headerText} />
         <LoginForm

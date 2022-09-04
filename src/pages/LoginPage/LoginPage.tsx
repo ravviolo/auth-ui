@@ -45,6 +45,7 @@ export const LoginPage = () => {
       footerBtnText="Sign Up"
       footerText="Need an account?"
       headerText="Login"
+      testId="login-template"
       onClickFacebook={handleLoginViaFacebook}
       onClickFooterBtn={handleNavigate}
       onClickGoogle={handleLoginViaGoogle}

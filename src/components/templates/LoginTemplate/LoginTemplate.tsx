@@ -36,6 +36,7 @@ export const LoginTemplate = ({
       <S.TemplateFlex direction="column" testId="flex-login-template">
         <AuthHeader testId="auth-header-login-template" title={headerText} />
         <LoginForm
+          testId="login-form"
           onClickResetPassword={onClickResetPassword}
           onSubmitLoginForm={onSubmitLoginForm}
         />

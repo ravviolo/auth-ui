@@ -5,7 +5,8 @@ import { EmailInput, PasswordInput } from 'components/molecules';
 
 import * as S from './LoginForm.styles';
 
-interface Props {
+export interface Props {
+  testId: string;
   onSubmitLoginForm: (
     email: string,
     password: string,
@@ -15,6 +16,7 @@ interface Props {
 }
 
 export const LoginForm = ({
+  testId,
   onSubmitLoginForm,
   onClickResetPassword,
 }: Props) => {
@@ -35,7 +37,7 @@ export const LoginForm = ({
   };
 
   return (
-    <form onSubmit={handleLogin}>
+    <form data-testid={testId} onSubmit={handleLogin}>
       <S.Container direction="column" testId="flex-login-form">
         <EmailInput
           ref={emailRef}
@@ -70,7 +72,7 @@ export const LoginForm = ({
             />
           </S.CheckboxContainer>
         </S.PasswordControl>
-        <Button label="Login" testId="login-btn" type="submit" />
+        <Button label="Login" testId="btn-submit-login" type="submit" />
 
         <S.ResetPasswordButton
           label="Forgot Password?"

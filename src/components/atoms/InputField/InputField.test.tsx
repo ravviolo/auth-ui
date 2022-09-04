@@ -22,6 +22,16 @@ describe('InputField', () => {
     expect(inputField).toHaveValue('');
   });
 
+  it('correctly assigns id, name and type values received via props', () => {
+    render(<InputField {...props} />);
+
+    const inputField = screen.getByTestId('test-input-field');
+
+    expect(inputField).toHaveAttribute('name', 'test-input-field');
+    expect(inputField).toHaveAttribute('id', 'test-input-field');
+    expect(inputField).toHaveAttribute('type', 'text');
+  });
+
   it('displays entered text', async () => {
     render(<InputField {...props} />);
 

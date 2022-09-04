@@ -13,20 +13,57 @@ describe('EmailInput', () => {
     testId: 'test-email-input',
   };
 
-  it('renders empty input of type email with Email as label', () => {
+  it('renders input of type email', () => {
     render(<EmailInput {...props} />);
 
     const emailInput = screen.getByTestId('test-email-input');
-
-    const emailInputLabel = within(emailInput).getByTestId('input-label-email');
     const emailInputField = within(emailInput).getByTestId('input-field-email');
 
-    expect(emailInputLabel).toHaveTextContent('Email');
-    expect(emailInputField).toHaveValue('');
     expect(emailInputField).toHaveAttribute('type', 'email');
   });
 
-  it('displays entered text', async () => {
+  it('correctly assigns id, name attributes to input field', () => {
+    render(<EmailInput {...props} />);
+
+    const emailInput = screen.getByTestId('test-email-input');
+    const emailInputField = within(emailInput).getByTestId('input-field-email');
+
+    expect(emailInputField).toHaveAttribute('id', 'test-email');
+    expect(emailInputField).toHaveAttribute('name', 'test-email');
+  });
+
+  it('semantically connects input label with input field', () => {
+    render(<EmailInput {...props} />);
+
+    const emailInput = screen.getByTestId('test-email-input');
+    const emailInputLabel = within(emailInput).getByTestId('input-label-email');
+    const emailInputField = within(emailInput).getByTestId('input-field-email');
+
+    expect(emailInputLabel).toHaveAttribute(
+      'for',
+      emailInputField.getAttribute('id')
+    );
+  });
+
+  it('renders initially empty input', () => {
+    render(<EmailInput {...props} />);
+
+    const emailInput = screen.getByTestId('test-email-input');
+    const emailInputField = within(emailInput).getByTestId('input-field-email');
+
+    expect(emailInputField).toHaveValue('');
+  });
+
+  it("displays 'Email' as input label", () => {
+    render(<EmailInput {...props} />);
+
+    const emailInput = screen.getByTestId('test-email-input');
+    const emailInputLabel = within(emailInput).getByTestId('input-label-email');
+
+    expect(emailInputLabel).toHaveTextContent('Email');
+  });
+
+  it('displays entered text in input field', async () => {
     render(<EmailInput {...props} />);
 
     const emailInput = screen.getByTestId('test-email-input');

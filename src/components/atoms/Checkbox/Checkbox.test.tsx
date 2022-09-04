@@ -7,14 +7,14 @@ import { Checkbox } from 'components/atoms';
 import { Props as CheckboxProps } from './Checkbox';
 
 describe('Checkbox', () => {
-  const Props: CheckboxProps = {
+  const props: CheckboxProps = {
     id: 'test-checkbox',
     name: 'test-checkbox',
     testId: 'test-checkbox',
   };
 
   it('renders unchecked', () => {
-    render(<Checkbox {...Props} />);
+    render(<Checkbox {...props} />);
 
     const checkbox = screen.getByTestId('test-checkbox');
 
@@ -22,7 +22,7 @@ describe('Checkbox', () => {
   });
 
   it('toggles checked state', async () => {
-    render(<Checkbox {...Props} />);
+    render(<Checkbox {...props} />);
 
     const checkbox = screen.getByTestId('test-checkbox');
 
@@ -36,7 +36,7 @@ describe('Checkbox', () => {
   });
 
   it('matches snapshot', () => {
-    const tree = create(<Checkbox {...Props} />).toJSON();
+    const tree = create(<Checkbox {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

@@ -32,6 +32,7 @@ export const SignUpTemplate = ({
         <SignUpForm onSubmitSignUpForm={onSubmitSignUpForm} />
         <Divider label="OR" testId="divider-signup" />
         <AuthSocials
+          testId="auth-socials-signup-template"
           onClickFacebook={onClickFacebook}
           onClickGoogle={onClickGoogle}
           onClickLinkedIn={onClickLinkedIn}

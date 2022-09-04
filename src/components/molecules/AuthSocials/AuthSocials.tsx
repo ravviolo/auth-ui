@@ -2,7 +2,8 @@ import { IconButton } from 'components/atoms';
 
 import * as S from './AuthSocials.styles';
 
-interface Props {
+export interface Props {
+  testId: string;
   onClickGoogle: () => void;
   onClickFacebook: () => void;
   onClickLinkedIn: () => void;
@@ -16,6 +17,7 @@ interface AuthSocial {
 }
 
 export const AuthSocials = ({
+  testId,
   onClickFacebook,
   onClickGoogle,
   onClickLinkedIn,
@@ -42,7 +44,7 @@ export const AuthSocials = ({
   ];
 
   return (
-    <S.Container direction="row" testId="flex-auth-socials">
+    <S.Container direction="row" testId={testId}>
       {authSocials.map(({ color, icon, name, onClickHandler }) => (
         <IconButton
           key={name}

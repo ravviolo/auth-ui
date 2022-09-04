@@ -41,6 +41,7 @@ export const LoginTemplate = ({
         />
         <Divider label="OR" testId="divider-login" />
         <AuthSocials
+          testId="auth-socials-login-template"
           onClickFacebook={onClickFacebook}
           onClickGoogle={onClickGoogle}
           onClickLinkedIn={onClickLinkedIn}

@@ -7,7 +7,7 @@ import { TextButton } from 'components/atoms';
 import { Props as TextButtonProps } from './TextButton';
 
 describe('TextButton', () => {
-  const mockOnClick = jest.fn();
+  const mockOnClick = jest.fn<TextButtonProps['onClick'], []>();
 
   const props: TextButtonProps = {
     label: 'Test Button',

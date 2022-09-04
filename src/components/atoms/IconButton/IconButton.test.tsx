@@ -7,7 +7,7 @@ import { IconButton } from 'components/atoms';
 import { Props as IconButtonProps } from './IconButton';
 
 describe('IconButton', () => {
-  const mockOnClick = jest.fn();
+  const mockOnClick = jest.fn<IconButtonProps['onClick'], []>();
 
   const props: IconButtonProps = {
     color: 'cyan',

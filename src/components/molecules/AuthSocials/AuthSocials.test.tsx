@@ -7,9 +7,15 @@ import { AuthSocials } from 'components/molecules';
 import { Props as AuthSocialsProps } from './AuthSocials';
 
 describe('AuthSocials', () => {
-  const mockOnClickGoogle = jest.fn();
-  const mockOnClickFacebook = jest.fn();
-  const mockOnClickLinkedIn = jest.fn();
+  const mockOnClickGoogle = jest.fn<AuthSocialsProps['onClickGoogle'], []>();
+  const mockOnClickFacebook = jest.fn<
+    AuthSocialsProps['onClickFacebook'],
+    []
+  >();
+  const mockOnClickLinkedIn = jest.fn<
+    AuthSocialsProps['onClickLinkedIn'],
+    []
+  >();
 
   const props: AuthSocialsProps = {
     testId: 'test-auth-socials',

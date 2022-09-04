@@ -7,9 +7,9 @@ import { Button } from 'components/atoms';
 import { Props as ButtonProps } from './Button';
 
 describe('Button', () => {
-  const mockOnClick = jest.fn();
+  const mockOnClick = jest.fn<ButtonProps['onClick'], []>();
 
-  const Props: ButtonProps = {
+  const props: ButtonProps = {
     label: 'Test Button',
     testId: 'test-btn',
     type: 'button',
@@ -17,7 +17,7 @@ describe('Button', () => {
   };
 
   it('displays text received via props', () => {
-    render(<Button {...Props} />);
+    render(<Button {...props} />);
 
     const btn = screen.getByTestId('test-btn');
 
@@ -25,7 +25,7 @@ describe('Button', () => {
   });
 
   it('handles click event, fires event handler once', async () => {
-    render(<Button {...Props} />);
+    render(<Button {...props} />);
 
     const btn = screen.getByTestId('test-btn');
 
@@ -35,7 +35,7 @@ describe('Button', () => {
   });
 
   it('matches snapshot', () => {
-    const tree = create(<Button {...Props} />).toJSON();
+    const tree = create(<Button {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

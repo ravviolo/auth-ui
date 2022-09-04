@@ -7,7 +7,7 @@ import { AuthFooter } from 'components/molecules';
 import { Props as AuthFooterProps } from './AuthFooter';
 
 describe('AuthFooter', () => {
-  const mockOnClick = jest.fn();
+  const mockOnClick = jest.fn<AuthFooterProps['onClick'], []>();
 
   const props: AuthFooterProps = {
     btnText: 'Footer Button',

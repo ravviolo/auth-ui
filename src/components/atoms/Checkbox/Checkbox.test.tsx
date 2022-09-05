@@ -13,6 +13,15 @@ describe('Checkbox', () => {
     testId: 'checkbox-test-id',
   };
 
+  it('should correctly assign id and name values received via props', () => {
+    render(<Checkbox {...props} />);
+
+    const checkbox = screen.getByTestId('checkbox-test-id');
+
+    expect(checkbox).toHaveAttribute('name', 'test-checkbox');
+    expect(checkbox).toHaveAttribute('id', 'test-checkbox');
+  });
+
   it('should initially render unchecked', () => {
     render(<Checkbox {...props} />);
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AuthFooter matches snapshot 1`] = `
+exports[`AuthFooter should match snapshot 1`] = `
 <footer
   className="sc-kDDrLX kktpMP"
   data-testid="test-auth-footer"

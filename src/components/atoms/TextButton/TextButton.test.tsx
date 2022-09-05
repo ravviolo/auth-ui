@@ -16,7 +16,7 @@ describe('TextButton', () => {
     onClick: mockOnClick,
   };
 
-  it('renders button with text received through props', () => {
+  it('should render button with text received through props', () => {
     render(<TextButton {...props} />);
 
     const textBtn = screen.getByTestId('test-text-btn');
@@ -24,7 +24,7 @@ describe('TextButton', () => {
     expect(textBtn).toHaveTextContent('Test Button');
   });
 
-  it('handles click event, fires event handler once', async () => {
+  it('should handle click event, fires event handler once', async () => {
     render(<TextButton {...props} />);
 
     const textBtn = screen.getByTestId('test-text-btn');
@@ -34,7 +34,7 @@ describe('TextButton', () => {
     expect(mockOnClick).toHaveBeenCalledTimes(1);
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<TextButton {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

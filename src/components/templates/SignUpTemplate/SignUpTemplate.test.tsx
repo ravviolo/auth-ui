@@ -40,7 +40,7 @@ describe('SignUpTemplate', () => {
     onClickFooterBtn: mockOnClickFooterBtn,
   };
 
-  it('renders signup header with title', () => {
+  it('should render signup header with title', () => {
     render(<SignUpTemplate {...props} />);
 
     const heading = screen.getByTestId('auth-header-signup-template');
@@ -48,7 +48,7 @@ describe('SignUpTemplate', () => {
     expect(heading).toHaveTextContent('SignUp Header');
   });
 
-  it('renders signup form', () => {
+  it('should render signup form', () => {
     render(<SignUpTemplate {...props} />);
 
     const signUpForm = screen.getByTestId('signup-form');
@@ -56,7 +56,7 @@ describe('SignUpTemplate', () => {
     expect(signUpForm).toBeInTheDocument();
   });
 
-  it('submits signup form with non-empty input fields', async () => {
+  it('should submit signup form with non-empty input fields', async () => {
     render(<SignUpTemplate {...props} />);
 
     const signUpForm = screen.getByTestId('signup-form');
@@ -78,7 +78,7 @@ describe('SignUpTemplate', () => {
     );
   });
 
-  it("doesn't submit form with one or more empty input fields", async () => {
+  it("shouldn't submit form with one or more empty input fields", async () => {
     render(<SignUpTemplate {...props} />);
 
     const signUpForm = screen.getByTestId('signup-form');
@@ -95,7 +95,7 @@ describe('SignUpTemplate', () => {
     expect(mockOnSubmitSignUpForm).not.toHaveBeenCalled();
   });
 
-  it("renders a section divider with 'OR' badge", () => {
+  it("should render a section divider with 'OR' badge", () => {
     render(<SignUpTemplate {...props} />);
 
     const divider = screen.getByTestId('divider-signup');
@@ -103,7 +103,7 @@ describe('SignUpTemplate', () => {
     expect(divider).toHaveTextContent('OR');
   });
 
-  it('renders authenticate through socials section, displays icons for Facebook, Google, LinkedIn', () => {
+  it('should render authenticate through socials section, should display icons for Facebook, Google, LinkedIn', () => {
     render(<SignUpTemplate {...props} />);
 
     const authSocials = screen.getByTestId('auth-socials-signup-template');
@@ -113,7 +113,7 @@ describe('SignUpTemplate', () => {
     expect(authSocialsIcons).toHaveLength(3);
   });
 
-  it('handles click events on Facebook icon - runs handler once', async () => {
+  it('should handle click events on Facebook icon - run handler once', async () => {
     render(<SignUpTemplate {...props} />);
 
     const authSocials = screen.getByTestId('auth-socials-signup-template');
@@ -124,7 +124,7 @@ describe('SignUpTemplate', () => {
     expect(mockOnClickFacebook).toHaveBeenCalledTimes(1);
   });
 
-  it('handles click events on Google icon - runs handler once', async () => {
+  it('should handle click events on Google icon - run handler once', async () => {
     render(<SignUpTemplate {...props} />);
 
     const authSocials = screen.getByTestId('auth-socials-signup-template');
@@ -135,7 +135,7 @@ describe('SignUpTemplate', () => {
     expect(mockOnClickGoogle).toHaveBeenCalledTimes(1);
   });
 
-  it('handles click events on LinkedIn icon - runs handler once', async () => {
+  it('should handle click events on LinkedIn icon - run handler once', async () => {
     render(<SignUpTemplate {...props} />);
 
     const authSocials = screen.getByTestId('auth-socials-signup-template');
@@ -146,7 +146,7 @@ describe('SignUpTemplate', () => {
     expect(mockOnClickLinkedIn).toHaveBeenCalledTimes(1);
   });
 
-  it('renders signup footer with text and button', () => {
+  it('should render signup footer with text and button', () => {
     render(<SignUpTemplate {...props} />);
 
     const footer = screen.getByTestId('auth-footer-signup-template');
@@ -156,7 +156,7 @@ describe('SignUpTemplate', () => {
     expect(footerBtn).toHaveTextContent('SignUp Footer Button');
   });
 
-  it('handles click events on footer button - runs handler once', async () => {
+  it('should handle click events on footer button - run handler once', async () => {
     render(<SignUpTemplate {...props} />);
 
     const footer = screen.getByTestId('auth-footer-signup-template');
@@ -167,7 +167,7 @@ describe('SignUpTemplate', () => {
     expect(mockOnClickFooterBtn).toHaveBeenCalledTimes(1);
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<SignUpTemplate {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SignUpTemplate matches snapshot 1`] = `
+exports[`SignUpTemplate should match snapshot 1`] = `
 <main
   className="sc-dmRaPn dQxFcV"
   data-testid="test-signup-template"

@@ -18,7 +18,7 @@ describe('Flex', () => {
       )),
   };
 
-  it('renders all children horizontally', () => {
+  it('should render all children horizontally', () => {
     render(<Flex {...props} direction="row" />);
 
     const flexContainer = screen.getByTestId('test-flex');
@@ -30,7 +30,7 @@ describe('Flex', () => {
     expect(flexContainerStyles.flexDirection).toBe('row');
   });
 
-  it('renders all children vertically', () => {
+  it('should render all children vertically', () => {
     render(<Flex {...props} direction="column" />);
 
     const flexContainer = screen.getByTestId('test-flex');
@@ -42,13 +42,13 @@ describe('Flex', () => {
     expect(flexContainerStyles.flexDirection).toBe('column');
   });
 
-  it('matches snapshot - renders all children horizontally', () => {
+  it('should match snapshot - renders all children horizontally', () => {
     const tree = create(<Flex {...props} direction="row" />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
-  it('matches snapshot - renders all children vertically', () => {
+  it('should match snapshot - renders all children vertically', () => {
     const tree = create(<Flex {...props} direction="column" />).toJSON();
 
     expect(tree).toMatchSnapshot();

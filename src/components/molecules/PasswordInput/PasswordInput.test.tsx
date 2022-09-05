@@ -13,7 +13,7 @@ describe('PasswordInput', () => {
     testId: 'test-password-input',
   };
 
-  it('renders input of type password', () => {
+  it('should render input of type password', () => {
     render(<PasswordInput {...props} />);
 
     const passwordInput = screen.getByTestId('test-password-input');
@@ -24,7 +24,7 @@ describe('PasswordInput', () => {
     expect(passwordInputField).toHaveAttribute('type', 'password');
   });
 
-  it('correctly assigns id, name attributes received via props', () => {
+  it('should correctly assign id, name attributes received via props', () => {
     render(<PasswordInput {...props} />);
 
     const passwordInput = screen.getByTestId('test-password-input');
@@ -36,7 +36,7 @@ describe('PasswordInput', () => {
     expect(passwordInputField).toHaveAttribute('name', 'test-password');
   });
 
-  it('semantically connects input label with input field', () => {
+  it('should semantically connect input label with input field', () => {
     render(<PasswordInput {...props} />);
 
     const passwordInput = screen.getByTestId('test-password-input');
@@ -53,7 +53,7 @@ describe('PasswordInput', () => {
     );
   });
 
-  it('renders initially empty input', () => {
+  it('should render initially empty input', () => {
     render(<PasswordInput {...props} />);
 
     const passwordInput = screen.getByTestId('test-password-input');
@@ -64,7 +64,7 @@ describe('PasswordInput', () => {
     expect(passwordInputField).toHaveValue('');
   });
 
-  it("displays 'Password' as input label", () => {
+  it("should display 'Password' as input label", () => {
     render(<PasswordInput {...props} />);
 
     const passwordInput = screen.getByTestId('test-password-input');
@@ -75,7 +75,7 @@ describe('PasswordInput', () => {
     expect(passwordInputLabel).toHaveTextContent('Password');
   });
 
-  it('displays entered text in input field', async () => {
+  it('should display entered text in input field', async () => {
     render(<PasswordInput {...props} />);
 
     const passwordInput = screen.getByTestId('test-password-input');
@@ -89,7 +89,7 @@ describe('PasswordInput', () => {
     expect(passwordInputField).toHaveValue('Test password');
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<PasswordInput {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

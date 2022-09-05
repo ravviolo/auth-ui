@@ -19,7 +19,7 @@ describe('SignUpForm', () => {
     onSubmitSignUpForm: mockOnSubmitSignUpForm,
   };
 
-  it('renders email and password inputs', () => {
+  it('should render email and password inputs', () => {
     render(<SignUpForm {...props} />);
 
     const emailInput = screen.getByTestId('email-input-signup-form');
@@ -29,7 +29,7 @@ describe('SignUpForm', () => {
     expect(passwordInput).toBeInTheDocument();
   });
 
-  it("renders submit button with 'Sign Up' text", () => {
+  it("should render submit button with 'Sign Up' text", () => {
     render(<SignUpForm {...props} />);
 
     const submitButton = screen.getByTestId('btn-submit-signup');
@@ -38,7 +38,7 @@ describe('SignUpForm', () => {
     expect(submitButton).toHaveTextContent('Sign Up');
   });
 
-  it('submits form with non-empty input fields - runs submit handler once', async () => {
+  it('should submit form with non-empty input fields - run submit handler once', async () => {
     render(<SignUpForm {...props} />);
 
     const submitButton = screen.getByTestId('btn-submit-signup');
@@ -60,7 +60,7 @@ describe('SignUpForm', () => {
     );
   });
 
-  it("doesn't submit form with one or more empty input fields", async () => {
+  it("shouldn't submit form with one or more empty input fields", async () => {
     render(<SignUpForm {...props} />);
 
     const submitButton = screen.getByTestId('btn-submit-signup');
@@ -79,7 +79,7 @@ describe('SignUpForm', () => {
     expect(mockOnSubmitSignUpForm).not.toHaveBeenCalled();
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<SignUpForm {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

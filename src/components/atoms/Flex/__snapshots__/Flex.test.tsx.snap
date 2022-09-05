@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Flex matches snapshot - renders all children horizontally 1`] = `
+exports[`Flex should match snapshot - renders all children horizontally 1`] = `
 <div
   className="sc-jSMfEi iChCMC"
   data-testid="test-flex"
@@ -19,7 +19,7 @@ exports[`Flex matches snapshot - renders all children horizontally 1`] = `
 </div>
 `;
 
-exports[`Flex matches snapshot - renders all children vertically 1`] = `
+exports[`Flex should match snapshot - renders all children vertically 1`] = `
 <div
   className="sc-jSMfEi bQrDqy"
   data-testid="test-flex"

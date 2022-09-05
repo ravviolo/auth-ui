@@ -13,7 +13,7 @@ describe('EmailInput', () => {
     testId: 'test-email-input',
   };
 
-  it('renders input of type email', () => {
+  it('should render input of type email', () => {
     render(<EmailInput {...props} />);
 
     const emailInput = screen.getByTestId('test-email-input');
@@ -22,7 +22,7 @@ describe('EmailInput', () => {
     expect(emailInputField).toHaveAttribute('type', 'email');
   });
 
-  it('correctly assigns id, name attributes to input field', () => {
+  it('should correctly assign id, name attributes to input field', () => {
     render(<EmailInput {...props} />);
 
     const emailInput = screen.getByTestId('test-email-input');
@@ -32,7 +32,7 @@ describe('EmailInput', () => {
     expect(emailInputField).toHaveAttribute('name', 'test-email');
   });
 
-  it('semantically connects input label with input field', () => {
+  it('should semantically connect input label with input field', () => {
     render(<EmailInput {...props} />);
 
     const emailInput = screen.getByTestId('test-email-input');
@@ -45,7 +45,7 @@ describe('EmailInput', () => {
     );
   });
 
-  it('renders initially empty input', () => {
+  it('should render initially empty input', () => {
     render(<EmailInput {...props} />);
 
     const emailInput = screen.getByTestId('test-email-input');
@@ -54,7 +54,7 @@ describe('EmailInput', () => {
     expect(emailInputField).toHaveValue('');
   });
 
-  it("displays 'Email' as input label", () => {
+  it("should display 'Email' as input label", () => {
     render(<EmailInput {...props} />);
 
     const emailInput = screen.getByTestId('test-email-input');
@@ -63,7 +63,7 @@ describe('EmailInput', () => {
     expect(emailInputLabel).toHaveTextContent('Email');
   });
 
-  it('displays entered text in input field', async () => {
+  it('should display entered text in input field', async () => {
     render(<EmailInput {...props} />);
 
     const emailInput = screen.getByTestId('test-email-input');
@@ -75,7 +75,7 @@ describe('EmailInput', () => {
     expect(emailInputField).toHaveValue('Testing input');
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<EmailInput {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

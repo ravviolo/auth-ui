@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoginForm matches snapshot 1`] = `
+exports[`LoginForm should match snapshot 1`] = `
 <form
   data-testid="test-login-form"
   onSubmit={[Function]}

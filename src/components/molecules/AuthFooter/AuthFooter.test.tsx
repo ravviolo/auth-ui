@@ -16,7 +16,7 @@ describe('AuthFooter', () => {
     onClick: mockOnClick,
   };
 
-  it('renders footer containing text and button', () => {
+  it('should render footer containing text and button', () => {
     render(<AuthFooter {...props} />);
 
     const authFooter = screen.getByTestId('test-auth-footer');
@@ -26,7 +26,7 @@ describe('AuthFooter', () => {
     expect(footerBtn).toHaveTextContent('Footer Button');
   });
 
-  it('displays button that handles click events', async () => {
+  it('should display button that handles click events', async () => {
     render(<AuthFooter {...props} />);
 
     const authFooter = screen.getByTestId('test-auth-footer');
@@ -37,7 +37,7 @@ describe('AuthFooter', () => {
     expect(mockOnClick).toHaveBeenCalledTimes(1);
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<AuthFooter {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

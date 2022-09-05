@@ -11,7 +11,7 @@ describe('Heading', () => {
     title: 'Test Heading',
   };
 
-  it('displays text received via props', () => {
+  it('should display text received via props', () => {
     render(<Heading {...props} />);
 
     const heading = screen.getByTestId('test-heading');
@@ -19,7 +19,7 @@ describe('Heading', () => {
     expect(heading).toHaveTextContent('Test Heading');
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<Heading {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

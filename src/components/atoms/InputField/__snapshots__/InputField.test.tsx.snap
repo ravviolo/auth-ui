@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InputField matches snapshot 1`] = `
+exports[`InputField should match snapshot 1`] = `
 <input
   className="sc-ftvSup dLJLzu"
   data-testid="test-input-field"

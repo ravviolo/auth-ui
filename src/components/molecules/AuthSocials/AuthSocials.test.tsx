@@ -24,7 +24,7 @@ describe('AuthSocials', () => {
     onClickLinkedIn: mockOnClickLinkedIn,
   };
 
-  it('renders icon buttons for authenticating through socials', () => {
+  it('should render icon buttons for authenticating through socials', () => {
     render(<AuthSocials {...props} />);
 
     const authSocials = screen.getByTestId('test-auth-socials');
@@ -34,7 +34,7 @@ describe('AuthSocials', () => {
     expect(socialsIconBtns).toHaveLength(3);
   });
 
-  it('handles click event, fires event handler once', async () => {
+  it('should handle click event, run event handler once', async () => {
     render(<AuthSocials {...props} />);
 
     const authSocials = screen.getByTestId('test-auth-socials');
@@ -55,7 +55,7 @@ describe('AuthSocials', () => {
     expect(mockOnClickLinkedIn).toHaveBeenCalledTimes(1);
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<AuthSocials {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

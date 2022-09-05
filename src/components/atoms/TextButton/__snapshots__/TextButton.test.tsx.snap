@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextButton matches snapshot 1`] = `
+exports[`TextButton should match snapshot 1`] = `
 <button
   className="sc-jqUVSM ebpvV"
   data-testid="test-text-btn"

@@ -11,7 +11,7 @@ describe('AuthHeader', () => {
     testId: 'test-auth-header',
   };
 
-  it('renders header with heading text passed as a prop', () => {
+  it('should render header with heading text passed as a prop', () => {
     render(<AuthHeader {...props} />);
 
     const authHeader = screen.getByTestId('test-auth-header');
@@ -20,7 +20,7 @@ describe('AuthHeader', () => {
 
     expect(authHeading).toHaveTextContent('Test Header Title');
   });
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<AuthHeader {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

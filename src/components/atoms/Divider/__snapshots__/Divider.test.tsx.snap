@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Divider matches snapshot with badge 1`] = `
+exports[`Divider should match snapshot with badge 1`] = `
 <div
   className="sc-dkzDqf fBSlBa"
   data-testid="test-divider"
@@ -16,7 +16,7 @@ exports[`Divider matches snapshot with badge 1`] = `
 </div>
 `;
 
-exports[`Divider matches snapshot without badge 1`] = `
+exports[`Divider should match snapshot without badge 1`] = `
 <div
   className="sc-dkzDqf fBSlBa"
   data-testid="test-divider"

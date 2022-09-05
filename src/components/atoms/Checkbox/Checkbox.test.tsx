@@ -13,7 +13,7 @@ describe('Checkbox', () => {
     testId: 'test-checkbox',
   };
 
-  it('renders unchecked', () => {
+  it('should initially render unchecked', () => {
     render(<Checkbox {...props} />);
 
     const checkbox = screen.getByTestId('test-checkbox');
@@ -21,7 +21,7 @@ describe('Checkbox', () => {
     expect(checkbox).not.toBeChecked();
   });
 
-  it('toggles checked state', async () => {
+  it('should toggle checked state', async () => {
     render(<Checkbox {...props} />);
 
     const checkbox = screen.getByTestId('test-checkbox');
@@ -35,7 +35,7 @@ describe('Checkbox', () => {
     expect(checkbox).not.toBeChecked();
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<Checkbox {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

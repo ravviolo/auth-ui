@@ -17,7 +17,7 @@ describe('IconButton', () => {
     onClick: mockOnClick,
   };
 
-  it('renders button with specified color and icon', () => {
+  it('should render button with specified color and icon', () => {
     render(<IconButton {...props} />);
 
     const iconBtn = screen.getByTestId('test-icon-btn');
@@ -30,7 +30,7 @@ describe('IconButton', () => {
     expect(iconBtnStyle.borderColor).toBe('cyan');
   });
 
-  it('handles click event, fires event handler once', async () => {
+  it('should handle click event, fires event handler once', async () => {
     render(<IconButton {...props} />);
 
     const iconBtn = screen.getByTestId('test-icon-btn');
@@ -40,7 +40,7 @@ describe('IconButton', () => {
     expect(mockOnClick).toHaveBeenCalledTimes(1);
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<IconButton {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

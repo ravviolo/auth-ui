@@ -32,7 +32,7 @@ describe('InputField', () => {
     expect(inputField).toHaveAttribute('type', 'text');
   });
 
-  it('displays entered text', async () => {
+  it('should display entered text', async () => {
     render(<InputField {...props} />);
 
     const inputField = screen.getByTestId('test-input-field');
@@ -42,7 +42,7 @@ describe('InputField', () => {
     expect(inputField).toHaveValue('Testing input field');
   });
 
-  it('displays part of entered text after deleting some characters', async () => {
+  it('should display part of entered text after deleting some characters', async () => {
     render(<InputField {...props} />);
 
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
@@ -57,7 +57,7 @@ describe('InputField', () => {
     expect(inputField).toHaveValue('Testing');
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<InputField {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

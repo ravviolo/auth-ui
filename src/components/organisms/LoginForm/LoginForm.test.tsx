@@ -24,7 +24,7 @@ describe('LoginForm', () => {
     onSubmitLoginForm: mockOnSubmitLoginForm,
   };
 
-  it('renders email and password inputs', () => {
+  it('should render email and password inputs', () => {
     render(<LoginForm {...props} />);
 
     const emailInput = screen.getByTestId('email-input-login-form');
@@ -34,7 +34,7 @@ describe('LoginForm', () => {
     expect(passwordInput).toBeInTheDocument();
   });
 
-  it("renders checkbox with 'Remember me?' label", () => {
+  it("should render checkbox with 'Remember me?' label", () => {
     render(<LoginForm {...props} />);
 
     const checkbox = screen.getByTestId('remember-password-checkbox');
@@ -46,7 +46,7 @@ describe('LoginForm', () => {
     expect(checkboxLabel).toHaveAttribute('for', checkbox.getAttribute('id'));
   });
 
-  it('renders initially unchecked checkbox', () => {
+  it('should render initially unchecked checkbox', () => {
     render(<LoginForm {...props} />);
 
     const checkbox = screen.getByTestId('remember-password-checkbox');
@@ -54,7 +54,7 @@ describe('LoginForm', () => {
     expect(checkbox).not.toBeChecked();
   });
 
-  it("renders submit button with 'Login' text", () => {
+  it("should render submit button with 'Login' text", () => {
     render(<LoginForm {...props} />);
 
     const submitButton = screen.getByTestId('btn-submit-login');
@@ -63,7 +63,7 @@ describe('LoginForm', () => {
     expect(submitButton).toHaveTextContent('Login');
   });
 
-  it('submits form with non-empty input fields and checkbox unchecked - runs submit handler once', async () => {
+  it('should submit form with non-empty input fields and checkbox unchecked - run submit handler once', async () => {
     render(<LoginForm {...props} />);
 
     const submitButton = screen.getByTestId('btn-submit-login');
@@ -86,7 +86,7 @@ describe('LoginForm', () => {
     );
   });
 
-  it('submits form with non-empty input fields and checkbox checked - runs submit handler once', async () => {
+  it('should submit form with non-empty input fields and checkbox checked - run submit handler once', async () => {
     render(<LoginForm {...props} />);
 
     const submitButton = screen.getByTestId('btn-submit-login');
@@ -111,7 +111,7 @@ describe('LoginForm', () => {
     );
   });
 
-  it("doesn't submit form with one or more empty input fields", async () => {
+  it("shouldn't submit form with one or more empty input fields", async () => {
     render(<LoginForm {...props} />);
 
     const submitButton = screen.getByTestId('btn-submit-login');
@@ -130,7 +130,7 @@ describe('LoginForm', () => {
     expect(mockOnSubmitLoginForm).not.toHaveBeenCalled();
   });
 
-  it("renders reset password button with 'Forgot Password?' text", () => {
+  it("should render reset password button with 'Forgot Password?' text", () => {
     render(<LoginForm {...props} />);
 
     const resetPasswordButton = screen.getByTestId('btn-reset-password');
@@ -139,7 +139,7 @@ describe('LoginForm', () => {
     expect(resetPasswordButton).toHaveTextContent('Forgot Password?');
   });
 
-  it('reset password button handles click events - runs click handler once', async () => {
+  it('reset password button should handle click events - run click handler once', async () => {
     render(<LoginForm {...props} />);
 
     const resetPasswordButton = screen.getByTestId('btn-reset-password');
@@ -149,7 +149,7 @@ describe('LoginForm', () => {
     expect(mockOnClickResetPassword).toHaveBeenCalledTimes(1);
   });
 
-  it('matches snapshot', () => {
+  it('should match snapshot', () => {
     const tree = create(<LoginForm {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

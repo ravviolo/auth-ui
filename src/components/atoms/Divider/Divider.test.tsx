@@ -10,7 +10,7 @@ describe('Divider', () => {
     testId: 'test-divider',
   };
 
-  it('renders correctly without badge', () => {
+  it('should render correctly without badge', () => {
     render(<Divider {...props} />);
 
     const divider = screen.getByTestId('test-divider');
@@ -22,7 +22,7 @@ describe('Divider', () => {
     expect(badgeText).not.toBeInTheDocument();
   });
 
-  it('renders correctly with badge', () => {
+  it('should render correctly with badge', () => {
     render(<Divider {...props} label="Badge" />);
 
     const divider = screen.getByTestId('test-divider');
@@ -34,13 +34,13 @@ describe('Divider', () => {
     expect(badgeText).toBeInTheDocument();
   });
 
-  it('matches snapshot with badge', () => {
+  it('should match snapshot with badge', () => {
     const tree = create(<Divider {...props} label="Badge" />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
-  it('matches snapshot without badge', () => {
+  it('should match snapshot without badge', () => {
     const tree = create(<Divider {...props} />).toJSON();
 
     expect(tree).toMatchSnapshot();

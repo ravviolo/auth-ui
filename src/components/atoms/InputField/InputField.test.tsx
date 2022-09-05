@@ -14,7 +14,7 @@ describe('InputField', () => {
     type: 'text',
   };
 
-  it('renders initially as empty input', () => {
+  it('should render initially as empty input', () => {
     render(<InputField {...props} />);
 
     const inputField = screen.getByTestId('input-field-test-id');
@@ -22,7 +22,7 @@ describe('InputField', () => {
     expect(inputField).toHaveValue('');
   });
 
-  it('correctly assigns id, name and type values received via props', () => {
+  it('should correctly assign id, name and type values received via props', () => {
     render(<InputField {...props} />);
 
     const inputField = screen.getByTestId('input-field-test-id');

@@ -2,29 +2,29 @@
 
 exports[`LoginForm should match snapshot 1`] = `
 <form
-  data-testid="test-login-form"
+  data-testid="login-form-test-id"
   onSubmit={[Function]}
 >
   <div
     className="sc-jSMfEi bQrDqy sc-hAZoDl bWsHpL"
-    data-testid="flex-login-form"
+    data-testid="flex-login-form-test-id"
     direction="column"
   >
     <div
       className="sc-jSMfEi bQrDqy sc-breuTD jjaaRC"
-      data-testid="email-input-login-form"
+      data-testid="email-input-login-form-test-id"
       direction="column"
     >
       <label
         className="sc-papXJ daxRFt"
-        data-testid="input-label-email"
+        data-testid="input-label-email-test-id"
         htmlFor="email"
       >
         Email
       </label>
       <input
         className="sc-ftvSup dLJLzu"
-        data-testid="input-field-email"
+        data-testid="input-field-email-test-id"
         id="email"
         name="email"
         type="email"
@@ -32,24 +32,24 @@ exports[`LoginForm should match snapshot 1`] = `
     </div>
     <div
       className="sc-jSMfEi bQrDqy sc-fnykZs hELmKH"
-      data-testid="flex-login-form-password-control"
+      data-testid="flex-login-form-password-control-test-id"
       direction="column"
     >
       <div
         className="sc-jSMfEi bQrDqy sc-ksZaOG cRa-dNN"
-        data-testid="password-input-login-form"
+        data-testid="password-input-login-form-test-id"
         direction="column"
       >
         <label
           className="sc-papXJ daxRFt"
-          data-testid="input-label-password"
+          data-testid="input-label-password-test-id"
           htmlFor="password"
         >
           Password
         </label>
         <input
           className="sc-ftvSup dLJLzu"
-          data-testid="input-field-password"
+          data-testid="input-field-password-test-id"
           id="password"
           name="password"
           type="password"
@@ -57,19 +57,19 @@ exports[`LoginForm should match snapshot 1`] = `
       </div>
       <div
         className="sc-jSMfEi iChCMC sc-fEOsli dPSjkT"
-        data-testid="flex-login-form-checkbox"
+        data-testid="flex-login-form-checkbox-test-id"
         direction="row"
       >
         <input
           className="sc-gsnTZi kVuJZl"
-          data-testid="remember-password-checkbox"
+          data-testid="remember-password-checkbox-test-id"
           id="rememberPassword"
           name="rememberPassword"
           type="checkbox"
         />
         <label
           className="sc-papXJ daxRFt"
-          data-testid="input-label-remember-password-checkbox"
+          data-testid="input-label-remember-password-checkbox-test-id"
           htmlFor="rememberPassword"
         >
           Remember me?
@@ -78,14 +78,14 @@ exports[`LoginForm should match snapshot 1`] = `
     </div>
     <button
       className="sc-bczRLJ jXOWFG"
-      data-testid="btn-submit-login"
+      data-testid="btn-submit-login-test-id"
       type="submit"
     >
       Login
     </button>
     <button
       className="sc-jqUVSM ebpvV sc-bjUoiL hqHESO"
-      data-testid="btn-reset-password"
+      data-testid="btn-reset-password-test-id"
       onClick={[MockFunction]}
       type="button"
     >

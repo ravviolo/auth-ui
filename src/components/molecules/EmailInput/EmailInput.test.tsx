@@ -10,14 +10,16 @@ describe('EmailInput', () => {
   const props: EmailInputProps = {
     id: 'test-email',
     name: 'test-email',
-    testId: 'test-email-input',
+    testId: 'email-input-test-id',
   };
 
   it('should render input of type email', () => {
     render(<EmailInput {...props} />);
 
-    const emailInput = screen.getByTestId('test-email-input');
-    const emailInputField = within(emailInput).getByTestId('input-field-email');
+    const emailInput = screen.getByTestId('email-input-test-id');
+    const emailInputField = within(emailInput).getByTestId(
+      'input-field-email-test-id'
+    );
 
     expect(emailInputField).toHaveAttribute('type', 'email');
   });
@@ -25,8 +27,10 @@ describe('EmailInput', () => {
   it('should correctly assign id, name attributes to input field', () => {
     render(<EmailInput {...props} />);
 
-    const emailInput = screen.getByTestId('test-email-input');
-    const emailInputField = within(emailInput).getByTestId('input-field-email');
+    const emailInput = screen.getByTestId('email-input-test-id');
+    const emailInputField = within(emailInput).getByTestId(
+      'input-field-email-test-id'
+    );
 
     expect(emailInputField).toHaveAttribute('id', 'test-email');
     expect(emailInputField).toHaveAttribute('name', 'test-email');
@@ -35,9 +39,13 @@ describe('EmailInput', () => {
   it('should semantically connect input label with input field', () => {
     render(<EmailInput {...props} />);
 
-    const emailInput = screen.getByTestId('test-email-input');
-    const emailInputLabel = within(emailInput).getByTestId('input-label-email');
-    const emailInputField = within(emailInput).getByTestId('input-field-email');
+    const emailInput = screen.getByTestId('email-input-test-id');
+    const emailInputLabel = within(emailInput).getByTestId(
+      'input-label-email-test-id'
+    );
+    const emailInputField = within(emailInput).getByTestId(
+      'input-field-email-test-id'
+    );
 
     expect(emailInputLabel).toHaveAttribute(
       'for',
@@ -48,8 +56,10 @@ describe('EmailInput', () => {
   it('should render initially empty input', () => {
     render(<EmailInput {...props} />);
 
-    const emailInput = screen.getByTestId('test-email-input');
-    const emailInputField = within(emailInput).getByTestId('input-field-email');
+    const emailInput = screen.getByTestId('email-input-test-id');
+    const emailInputField = within(emailInput).getByTestId(
+      'input-field-email-test-id'
+    );
 
     expect(emailInputField).toHaveValue('');
   });
@@ -57,8 +67,10 @@ describe('EmailInput', () => {
   it("should display 'Email' as input label", () => {
     render(<EmailInput {...props} />);
 
-    const emailInput = screen.getByTestId('test-email-input');
-    const emailInputLabel = within(emailInput).getByTestId('input-label-email');
+    const emailInput = screen.getByTestId('email-input-test-id');
+    const emailInputLabel = within(emailInput).getByTestId(
+      'input-label-email-test-id'
+    );
 
     expect(emailInputLabel).toHaveTextContent('Email');
   });
@@ -66,9 +78,11 @@ describe('EmailInput', () => {
   it('should display entered text in input field', async () => {
     render(<EmailInput {...props} />);
 
-    const emailInput = screen.getByTestId('test-email-input');
+    const emailInput = screen.getByTestId('email-input-test-id');
 
-    const emailInputField = within(emailInput).getByTestId('input-field-email');
+    const emailInputField = within(emailInput).getByTestId(
+      'input-field-email-test-id'
+    );
 
     await userEvent.type(emailInputField, 'Testing input');
 

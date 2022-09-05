@@ -7,7 +7,7 @@ import { Props as FlexProps } from './Flex';
 
 describe('Flex', () => {
   const props: Omit<FlexProps, 'direction'> = {
-    testId: 'test-flex',
+    testId: 'flex-test-id',
     children: Array(10)
       .fill(1)
       .map((_, i) => (
@@ -21,7 +21,7 @@ describe('Flex', () => {
   it('should render all children horizontally', () => {
     render(<Flex {...props} direction="row" />);
 
-    const flexContainer = screen.getByTestId('test-flex');
+    const flexContainer = screen.getByTestId('flex-test-id');
 
     const flexChildren = within(flexContainer).getAllByRole('listitem');
     expect(flexChildren).toHaveLength(10);
@@ -33,7 +33,7 @@ describe('Flex', () => {
   it('should render all children vertically', () => {
     render(<Flex {...props} direction="column" />);
 
-    const flexContainer = screen.getByTestId('test-flex');
+    const flexContainer = screen.getByTestId('flex-test-id');
 
     const flexChildren = within(flexContainer).getAllByRole('listitem');
     expect(flexChildren).toHaveLength(10);

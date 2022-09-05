@@ -3,7 +3,7 @@
 exports[`Button should match snapshot 1`] = `
 <button
   className="sc-bczRLJ jXOWFG"
-  data-testid="test-btn"
+  data-testid="btn-test-id"
   onClick={[MockFunction]}
   type="button"
 >

@@ -2,11 +2,11 @@
 
 exports[`AuthHeader should match snapshot 1`] = `
 <header
-  data-testid="test-auth-header"
+  data-testid="auth-header-test-id"
 >
   <h1
     className="sc-gKXOVf zAjwy"
-    data-testid="auth-heading"
+    data-testid="auth-heading-test-id"
   >
     Test Header Title
   </h1>

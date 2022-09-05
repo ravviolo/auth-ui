@@ -15,15 +15,17 @@ describe('SignUpForm', () => {
   const testPassword = 'testpassword';
 
   const props: SignUpFormProps = {
-    testId: 'test-signup-form',
+    testId: 'signup-form-test-id',
     onSubmitSignUpForm: mockOnSubmitSignUpForm,
   };
 
   it('should render email and password inputs', () => {
     render(<SignUpForm {...props} />);
 
-    const emailInput = screen.getByTestId('email-input-signup-form');
-    const passwordInput = screen.getByTestId('password-input-signup-form');
+    const emailInput = screen.getByTestId('email-input-signup-form-test-id');
+    const passwordInput = screen.getByTestId(
+      'password-input-signup-form-test-id'
+    );
 
     expect(emailInput).toBeInTheDocument();
     expect(passwordInput).toBeInTheDocument();
@@ -32,7 +34,7 @@ describe('SignUpForm', () => {
   it("should render submit button with 'Sign Up' text", () => {
     render(<SignUpForm {...props} />);
 
-    const submitButton = screen.getByTestId('btn-submit-signup');
+    const submitButton = screen.getByTestId('btn-submit-signup-test-id');
 
     expect(submitButton).toHaveAttribute('type', 'submit');
     expect(submitButton).toHaveTextContent('Sign Up');
@@ -41,13 +43,13 @@ describe('SignUpForm', () => {
   it('should submit form with non-empty input fields - run submit handler once', async () => {
     render(<SignUpForm {...props} />);
 
-    const submitButton = screen.getByTestId('btn-submit-signup');
+    const submitButton = screen.getByTestId('btn-submit-signup-test-id');
     const emailInputField = within(
-      screen.getByTestId('email-input-signup-form')
-    ).getByTestId('input-field-email');
+      screen.getByTestId('email-input-signup-form-test-id')
+    ).getByTestId('input-field-email-test-id');
     const passwordInputField = within(
-      screen.getByTestId('password-input-signup-form')
-    ).getByTestId('input-field-password');
+      screen.getByTestId('password-input-signup-form-test-id')
+    ).getByTestId('input-field-password-test-id');
 
     await userEvent.type(emailInputField, testEmail);
     await userEvent.type(passwordInputField, testPassword);
@@ -63,15 +65,15 @@ describe('SignUpForm', () => {
   it("shouldn't submit form with one or more empty input fields", async () => {
     render(<SignUpForm {...props} />);
 
-    const submitButton = screen.getByTestId('btn-submit-signup');
+    const submitButton = screen.getByTestId('btn-submit-signup-test-id');
 
     await userEvent.click(submitButton);
 
     expect(mockOnSubmitSignUpForm).not.toHaveBeenCalled();
 
     const emailInputField = within(
-      screen.getByTestId('email-input-signup-form')
-    ).getByTestId('input-field-email');
+      screen.getByTestId('email-input-signup-form-test-id')
+    ).getByTestId('input-field-email-test-id');
 
     await userEvent.type(emailInputField, testEmail);
     await userEvent.click(submitButton);

@@ -7,14 +7,14 @@ import { Props as HeadingProps } from './Heading';
 
 describe('Heading', () => {
   const props: HeadingProps = {
-    testId: 'test-heading',
+    testId: 'heading-test-id',
     title: 'Test Heading',
   };
 
   it('should display text received via props', () => {
     render(<Heading {...props} />);
 
-    const heading = screen.getByTestId('test-heading');
+    const heading = screen.getByTestId('heading-test-id');
 
     expect(heading).toHaveTextContent('Test Heading');
   });

@@ -19,7 +19,7 @@ describe('LoginForm', () => {
   const testPassword = 'testpassword';
 
   const props: LoginFormProps = {
-    testId: 'test-login-form',
+    testId: 'login-form-test-id',
     onClickResetPassword: mockOnClickResetPassword,
     onSubmitLoginForm: mockOnSubmitLoginForm,
   };
@@ -27,8 +27,10 @@ describe('LoginForm', () => {
   it('should render email and password inputs', () => {
     render(<LoginForm {...props} />);
 
-    const emailInput = screen.getByTestId('email-input-login-form');
-    const passwordInput = screen.getByTestId('password-input-login-form');
+    const emailInput = screen.getByTestId('email-input-login-form-test-id');
+    const passwordInput = screen.getByTestId(
+      'password-input-login-form-test-id'
+    );
 
     expect(emailInput).toBeInTheDocument();
     expect(passwordInput).toBeInTheDocument();
@@ -37,9 +39,9 @@ describe('LoginForm', () => {
   it("should render checkbox with 'Remember me?' label", () => {
     render(<LoginForm {...props} />);
 
-    const checkbox = screen.getByTestId('remember-password-checkbox');
+    const checkbox = screen.getByTestId('remember-password-checkbox-test-id');
     const checkboxLabel = screen.getByTestId(
-      'input-label-remember-password-checkbox'
+      'input-label-remember-password-checkbox-test-id'
     );
 
     expect(checkboxLabel).toHaveTextContent(/Remember me?/);
@@ -49,7 +51,7 @@ describe('LoginForm', () => {
   it('should render initially unchecked checkbox', () => {
     render(<LoginForm {...props} />);
 
-    const checkbox = screen.getByTestId('remember-password-checkbox');
+    const checkbox = screen.getByTestId('remember-password-checkbox-test-id');
 
     expect(checkbox).not.toBeChecked();
   });
@@ -57,7 +59,7 @@ describe('LoginForm', () => {
   it("should render submit button with 'Login' text", () => {
     render(<LoginForm {...props} />);
 
-    const submitButton = screen.getByTestId('btn-submit-login');
+    const submitButton = screen.getByTestId('btn-submit-login-test-id');
 
     expect(submitButton).toHaveAttribute('type', 'submit');
     expect(submitButton).toHaveTextContent('Login');
@@ -66,13 +68,13 @@ describe('LoginForm', () => {
   it('should submit form with non-empty input fields and checkbox unchecked - run submit handler once', async () => {
     render(<LoginForm {...props} />);
 
-    const submitButton = screen.getByTestId('btn-submit-login');
+    const submitButton = screen.getByTestId('btn-submit-login-test-id');
     const emailInputField = within(
-      screen.getByTestId('email-input-login-form')
-    ).getByTestId('input-field-email');
+      screen.getByTestId('email-input-login-form-test-id')
+    ).getByTestId('input-field-email-test-id');
     const passwordInputField = within(
-      screen.getByTestId('password-input-login-form')
-    ).getByTestId('input-field-password');
+      screen.getByTestId('password-input-login-form-test-id')
+    ).getByTestId('input-field-password-test-id');
 
     await userEvent.type(emailInputField, testEmail);
     await userEvent.type(passwordInputField, testPassword);
@@ -89,14 +91,14 @@ describe('LoginForm', () => {
   it('should submit form with non-empty input fields and checkbox checked - run submit handler once', async () => {
     render(<LoginForm {...props} />);
 
-    const submitButton = screen.getByTestId('btn-submit-login');
+    const submitButton = screen.getByTestId('btn-submit-login-test-id');
     const emailInputField = within(
-      screen.getByTestId('email-input-login-form')
-    ).getByTestId('input-field-email');
+      screen.getByTestId('email-input-login-form-test-id')
+    ).getByTestId('input-field-email-test-id');
     const passwordInputField = within(
-      screen.getByTestId('password-input-login-form')
-    ).getByTestId('input-field-password');
-    const checkbox = screen.getByTestId('remember-password-checkbox');
+      screen.getByTestId('password-input-login-form-test-id')
+    ).getByTestId('input-field-password-test-id');
+    const checkbox = screen.getByTestId('remember-password-checkbox-test-id');
 
     await userEvent.type(emailInputField, testEmail);
     await userEvent.type(passwordInputField, testPassword);
@@ -114,15 +116,15 @@ describe('LoginForm', () => {
   it("shouldn't submit form with one or more empty input fields", async () => {
     render(<LoginForm {...props} />);
 
-    const submitButton = screen.getByTestId('btn-submit-login');
+    const submitButton = screen.getByTestId('btn-submit-login-test-id');
 
     await userEvent.click(submitButton);
 
     expect(mockOnSubmitLoginForm).not.toHaveBeenCalled();
 
     const emailInputField = within(
-      screen.getByTestId('email-input-login-form')
-    ).getByTestId('input-field-email');
+      screen.getByTestId('email-input-login-form-test-id')
+    ).getByTestId('input-field-email-test-id');
 
     await userEvent.type(emailInputField, testEmail);
     await userEvent.click(submitButton);
@@ -133,7 +135,9 @@ describe('LoginForm', () => {
   it("should render reset password button with 'Forgot Password?' text", () => {
     render(<LoginForm {...props} />);
 
-    const resetPasswordButton = screen.getByTestId('btn-reset-password');
+    const resetPasswordButton = screen.getByTestId(
+      'btn-reset-password-test-id'
+    );
 
     expect(resetPasswordButton).toHaveAttribute('type', 'button');
     expect(resetPasswordButton).toHaveTextContent('Forgot Password?');
@@ -142,7 +146,9 @@ describe('LoginForm', () => {
   it('reset password button should handle click events - run click handler once', async () => {
     render(<LoginForm {...props} />);
 
-    const resetPasswordButton = screen.getByTestId('btn-reset-password');
+    const resetPasswordButton = screen.getByTestId(
+      'btn-reset-password-test-id'
+    );
 
     await userEvent.click(resetPasswordButton);
 

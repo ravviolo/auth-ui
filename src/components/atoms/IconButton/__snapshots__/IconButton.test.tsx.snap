@@ -4,7 +4,7 @@ exports[`IconButton should match snapshot 1`] = `
 <button
   className="sc-iBkjds fegfkl"
   color="cyan"
-  data-testid="test-icon-btn"
+  data-testid="icon-btn-test-id"
   onClick={[MockFunction]}
   type="button"
 >

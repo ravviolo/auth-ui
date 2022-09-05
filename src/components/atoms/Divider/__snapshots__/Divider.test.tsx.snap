@@ -3,7 +3,7 @@
 exports[`Divider should match snapshot with badge 1`] = `
 <div
   className="sc-dkzDqf fBSlBa"
-  data-testid="test-divider"
+  data-testid="divider-test-id"
 >
   <div
     className="sc-hKMtZM cJojKy"
@@ -19,7 +19,7 @@ exports[`Divider should match snapshot with badge 1`] = `
 exports[`Divider should match snapshot without badge 1`] = `
 <div
   className="sc-dkzDqf fBSlBa"
-  data-testid="test-divider"
+  data-testid="divider-test-id"
 >
   <div
     className="sc-hKMtZM cJojKy"

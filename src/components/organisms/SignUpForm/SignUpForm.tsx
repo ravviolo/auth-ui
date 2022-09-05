@@ -26,20 +26,24 @@ export const SignUpForm = ({ testId, onSubmitSignUpForm }: Props) => {
   };
   return (
     <form data-testid={testId} onSubmit={handleSubmit}>
-      <S.Container direction="column" testId="flex-signup-form">
+      <S.Container direction="column" testId="flex-signup-form-test-id">
         <EmailInput
           ref={emailRef}
           id="email"
           name="email"
-          testId="email-input-signup-form"
+          testId="email-input-signup-form-test-id"
         />
         <PasswordInput
           ref={passwordRef}
           id="password"
           name="password"
-          testId="password-input-signup-form"
+          testId="password-input-signup-form-test-id"
         />
-        <Button label="Sign Up" testId="btn-submit-signup" type="submit" />
+        <Button
+          label="Sign Up"
+          testId="btn-submit-signup-test-id"
+          type="submit"
+        />
       </S.Container>
     </form>
   );

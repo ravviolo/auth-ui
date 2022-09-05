@@ -10,13 +10,13 @@ describe('Checkbox', () => {
   const props: CheckboxProps = {
     id: 'test-checkbox',
     name: 'test-checkbox',
-    testId: 'test-checkbox',
+    testId: 'checkbox-test-id',
   };
 
   it('should initially render unchecked', () => {
     render(<Checkbox {...props} />);
 
-    const checkbox = screen.getByTestId('test-checkbox');
+    const checkbox = screen.getByTestId('checkbox-test-id');
 
     expect(checkbox).not.toBeChecked();
   });
@@ -24,7 +24,7 @@ describe('Checkbox', () => {
   it('should toggle checked state', async () => {
     render(<Checkbox {...props} />);
 
-    const checkbox = screen.getByTestId('test-checkbox');
+    const checkbox = screen.getByTestId('checkbox-test-id');
 
     await userEvent.click(checkbox);
 

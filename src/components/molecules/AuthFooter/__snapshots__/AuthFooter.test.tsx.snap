@@ -3,11 +3,11 @@
 exports[`AuthFooter should match snapshot 1`] = `
 <footer
   className="sc-kDDrLX kktpMP"
-  data-testid="test-auth-footer"
+  data-testid="auth-footer-test-id"
 >
   <div
     className="sc-jSMfEi iChCMC sc-crXcEl bUmuaF"
-    data-testid="flex-footer"
+    data-testid="flex-footer-test-id"
     direction="row"
   >
     <p>
@@ -15,7 +15,7 @@ exports[`AuthFooter should match snapshot 1`] = `
     </p>
     <button
       className="sc-jqUVSM ebpvV sc-iqcoie bPYbbt"
-      data-testid="btn-footer"
+      data-testid="btn-footer-test-id"
       onClick={[MockFunction]}
       type="button"
     >

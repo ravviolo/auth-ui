@@ -7,13 +7,13 @@ import { Props as DividerProps } from './Divider';
 
 describe('Divider', () => {
   const props: DividerProps = {
-    testId: 'test-divider',
+    testId: 'divider-test-id',
   };
 
   it('should render correctly without badge', () => {
     render(<Divider {...props} />);
 
-    const divider = screen.getByTestId('test-divider');
+    const divider = screen.getByTestId('divider-test-id');
 
     expect(divider).toBeInTheDocument();
 
@@ -25,7 +25,7 @@ describe('Divider', () => {
   it('should render correctly with badge', () => {
     render(<Divider {...props} label="Badge" />);
 
-    const divider = screen.getByTestId('test-divider');
+    const divider = screen.getByTestId('divider-test-id');
 
     expect(divider).toBeInTheDocument();
 

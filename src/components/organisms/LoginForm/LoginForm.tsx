@@ -38,45 +38,45 @@ export const LoginForm = ({
 
   return (
     <form data-testid={testId} onSubmit={handleLogin}>
-      <S.Container direction="column" testId="flex-login-form">
+      <S.Container direction="column" testId="flex-login-form-test-id">
         <EmailInput
           ref={emailRef}
           id="email"
           name="email"
-          testId="email-input-login-form"
+          testId="email-input-login-form-test-id"
         />
         <S.PasswordControl
           direction="column"
-          testId="flex-login-form-password-control"
+          testId="flex-login-form-password-control-test-id"
         >
           <PasswordInput
             ref={passwordRef}
             id="password"
             name="password"
-            testId="password-input-login-form"
+            testId="password-input-login-form-test-id"
           />
           <S.CheckboxContainer
             direction="row"
-            testId="flex-login-form-checkbox"
+            testId="flex-login-form-checkbox-test-id"
           >
             <Checkbox
               ref={rememberPasswordRef}
               id="rememberPassword"
               name="rememberPassword"
-              testId="remember-password-checkbox"
+              testId="remember-password-checkbox-test-id"
             />
             <InputLabel
               htmlFor="rememberPassword"
               label="Remember me?"
-              testId="input-label-remember-password-checkbox"
+              testId="input-label-remember-password-checkbox-test-id"
             />
           </S.CheckboxContainer>
         </S.PasswordControl>
-        <Button label="Login" testId="btn-submit-login" type="submit" />
+        <Button label="Login" testId="btn-submit-login-test-id" type="submit" />
 
         <S.ResetPasswordButton
           label="Forgot Password?"
-          testId="btn-reset-password"
+          testId="btn-reset-password-test-id"
           type="button"
           onClick={onClickResetPassword}
         />

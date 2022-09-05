@@ -8,7 +8,7 @@ export interface Props {
 export const AuthHeader = ({ title, testId }: Props) => {
   return (
     <header data-testid={testId}>
-      <Heading testId="auth-heading" title={title} />
+      <Heading testId="auth-heading-test-id" title={title} />
     </header>
   );
 };

@@ -3,7 +3,7 @@
 exports[`Heading should match snapshot 1`] = `
 <h1
   className="sc-gKXOVf zAjwy"
-  data-testid="test-heading"
+  data-testid="heading-test-id"
 >
   Test Heading
 </h1>

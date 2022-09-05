@@ -35,23 +35,26 @@ export const LoginTemplate = ({
 }: Props) => {
   return (
     <S.Container data-testid={testId}>
-      <S.TemplateFlex direction="column" testId="flex-login-template">
-        <AuthHeader testId="auth-header-login-template" title={headerText} />
+      <S.TemplateFlex direction="column" testId="flex-login-template-test-id">
+        <AuthHeader
+          testId="auth-header-login-template-test-id"
+          title={headerText}
+        />
         <LoginForm
-          testId="login-form"
+          testId="login-form-test-id"
           onClickResetPassword={onClickResetPassword}
           onSubmitLoginForm={onSubmitLoginForm}
         />
-        <Divider label="OR" testId="divider-login" />
+        <Divider label="OR" testId="divider-login-test-id" />
         <AuthSocials
-          testId="auth-socials-login-template"
+          testId="auth-socials-login-template-test-id"
           onClickFacebook={onClickFacebook}
           onClickGoogle={onClickGoogle}
           onClickLinkedIn={onClickLinkedIn}
         />
         <AuthFooter
           btnText={footerBtnText}
-          testId="auth-footer-login-template"
+          testId="auth-footer-login-template-test-id"
           text={footerText}
           onClick={onClickFooterBtn}
         />

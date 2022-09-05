@@ -3,7 +3,7 @@
 exports[`InputLabel should match snapshot 1`] = `
 <label
   className="sc-papXJ daxRFt"
-  data-testid="test-input-label"
+  data-testid="input-label-test-id"
   htmlFor="test-input-label"
 >
   Test Input

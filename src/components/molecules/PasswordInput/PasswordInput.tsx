@@ -17,13 +17,13 @@ export const PasswordInput = React.forwardRef<HTMLInputElement, Props>(
         <InputLabel
           htmlFor={id}
           label="Password"
-          testId="input-label-password"
+          testId="input-label-password-test-id"
         />
         <InputField
           ref={ref}
           id={id}
           name={name}
-          testId="input-field-password"
+          testId="input-field-password-test-id"
           type="password"
         />
       </S.InputContainer>

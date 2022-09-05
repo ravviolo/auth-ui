@@ -50,7 +50,7 @@ export const AuthSocials = ({
           key={name}
           color={color}
           icon={icon}
-          testId={`icon-btn-${name}`}
+          testId={`icon-btn-${name}-test-id`}
           type="button"
           onClick={onClickHandler}
         />

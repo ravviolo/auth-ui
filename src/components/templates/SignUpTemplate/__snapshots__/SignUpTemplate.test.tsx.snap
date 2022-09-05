@@ -3,47 +3,47 @@
 exports[`SignUpTemplate should match snapshot 1`] = `
 <main
   className="sc-dmRaPn dQxFcV"
-  data-testid="test-signup-template"
+  data-testid="signup-template-test-id"
 >
   <div
     className="sc-jSMfEi bQrDqy sc-kgflAQ iSfrTS"
-    data-testid="flex-signup-template"
+    data-testid="flex-signup-template-test-id"
     direction="column"
   >
     <header
-      data-testid="auth-header-signup-template"
+      data-testid="auth-header-signup-template-test-id"
     >
       <h1
         className="sc-gKXOVf zAjwy"
-        data-testid="auth-heading"
+        data-testid="auth-heading-test-id"
       >
         SignUp Header
       </h1>
     </header>
     <form
-      data-testid="signup-form"
+      data-testid="signup-form-test-id"
       onSubmit={[Function]}
     >
       <div
         className="sc-jSMfEi bQrDqy sc-idiyUo wwKtw"
-        data-testid="flex-signup-form"
+        data-testid="flex-signup-form-test-id"
         direction="column"
       >
         <div
           className="sc-jSMfEi bQrDqy sc-breuTD jjaaRC"
-          data-testid="email-input-signup-form"
+          data-testid="email-input-signup-form-test-id"
           direction="column"
         >
           <label
             className="sc-papXJ daxRFt"
-            data-testid="input-label-email"
+            data-testid="input-label-email-test-id"
             htmlFor="email"
           >
             Email
           </label>
           <input
             className="sc-ftvSup dLJLzu"
-            data-testid="input-field-email"
+            data-testid="input-field-email-test-id"
             id="email"
             name="email"
             type="email"
@@ -51,19 +51,19 @@ exports[`SignUpTemplate should match snapshot 1`] = `
         </div>
         <div
           className="sc-jSMfEi bQrDqy sc-ksZaOG cRa-dNN"
-          data-testid="password-input-signup-form"
+          data-testid="password-input-signup-form-test-id"
           direction="column"
         >
           <label
             className="sc-papXJ daxRFt"
-            data-testid="input-label-password"
+            data-testid="input-label-password-test-id"
             htmlFor="password"
           >
             Password
           </label>
           <input
             className="sc-ftvSup dLJLzu"
-            data-testid="input-field-password"
+            data-testid="input-field-password-test-id"
             id="password"
             name="password"
             type="password"
@@ -71,7 +71,7 @@ exports[`SignUpTemplate should match snapshot 1`] = `
         </div>
         <button
           className="sc-bczRLJ jXOWFG"
-          data-testid="btn-submit-signup"
+          data-testid="btn-submit-signup-test-id"
           type="submit"
         >
           Sign Up
@@ -80,7 +80,7 @@ exports[`SignUpTemplate should match snapshot 1`] = `
     </form>
     <div
       className="sc-dkzDqf fBSlBa"
-      data-testid="divider-signup"
+      data-testid="divider-signup-test-id"
     >
       <div
         className="sc-hKMtZM cJojKy"
@@ -93,13 +93,13 @@ exports[`SignUpTemplate should match snapshot 1`] = `
     </div>
     <div
       className="sc-jSMfEi iChCMC sc-evZas fBPmfS"
-      data-testid="auth-socials-signup-template"
+      data-testid="auth-socials-signup-template-test-id"
       direction="row"
     >
       <button
         className="sc-iBkjds cxbDaZ"
         color="#DB4437"
-        data-testid="icon-btn-Google"
+        data-testid="icon-btn-Google-test-id"
         onClick={[MockFunction]}
         type="button"
       >
@@ -108,7 +108,7 @@ exports[`SignUpTemplate should match snapshot 1`] = `
       <button
         className="sc-iBkjds bqhZzF"
         color="#4267B2"
-        data-testid="icon-btn-Facebook"
+        data-testid="icon-btn-Facebook-test-id"
         onClick={[MockFunction]}
         type="button"
       >
@@ -117,7 +117,7 @@ exports[`SignUpTemplate should match snapshot 1`] = `
       <button
         className="sc-iBkjds hAqsSt"
         color="#0077B5"
-        data-testid="icon-btn-LinkedIn"
+        data-testid="icon-btn-LinkedIn-test-id"
         onClick={[MockFunction]}
         type="button"
       >
@@ -126,11 +126,11 @@ exports[`SignUpTemplate should match snapshot 1`] = `
     </div>
     <footer
       className="sc-kDDrLX kktpMP"
-      data-testid="auth-footer-signup-template"
+      data-testid="auth-footer-signup-template-test-id"
     >
       <div
         className="sc-jSMfEi iChCMC sc-crXcEl bUmuaF"
-        data-testid="flex-footer"
+        data-testid="flex-footer-test-id"
         direction="row"
       >
         <p>
@@ -138,7 +138,7 @@ exports[`SignUpTemplate should match snapshot 1`] = `
         </p>
         <button
           className="sc-jqUVSM ebpvV sc-iqcoie bPYbbt"
-          data-testid="btn-footer"
+          data-testid="btn-footer-test-id"
           onClick={[MockFunction]}
           type="button"
         >

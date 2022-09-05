@@ -3,19 +3,19 @@
 exports[`EmailInput should match snapshot 1`] = `
 <div
   className="sc-jSMfEi bQrDqy sc-breuTD jjaaRC"
-  data-testid="test-email-input"
+  data-testid="email-input-test-id"
   direction="column"
 >
   <label
     className="sc-papXJ daxRFt"
-    data-testid="input-label-email"
+    data-testid="input-label-email-test-id"
     htmlFor="test-email"
   >
     Email
   </label>
   <input
     className="sc-ftvSup dLJLzu"
-    data-testid="input-field-email"
+    data-testid="input-field-email-test-id"
     id="test-email"
     name="test-email"
     type="email"

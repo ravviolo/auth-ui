@@ -8,15 +8,15 @@ import { Props as AuthHeaderProps } from './AuthHeader';
 describe('AuthHeader', () => {
   const props: AuthHeaderProps = {
     title: 'Test Header Title',
-    testId: 'test-auth-header',
+    testId: 'auth-header-test-id',
   };
 
   it('should render header with heading text passed as a prop', () => {
     render(<AuthHeader {...props} />);
 
-    const authHeader = screen.getByTestId('test-auth-header');
+    const authHeader = screen.getByTestId('auth-header-test-id');
 
-    const authHeading = within(authHeader).getByTestId('auth-heading');
+    const authHeading = within(authHeader).getByTestId('auth-heading-test-id');
 
     expect(authHeading).toHaveTextContent('Test Header Title');
   });

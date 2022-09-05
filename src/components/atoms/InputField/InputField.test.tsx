@@ -10,14 +10,14 @@ describe('InputField', () => {
   const props: InputFieldProps = {
     id: 'test-input-field',
     name: 'test-input-field',
-    testId: 'test-input-field',
+    testId: 'input-field-test-id',
     type: 'text',
   };
 
   it('renders initially as empty input', () => {
     render(<InputField {...props} />);
 
-    const inputField = screen.getByTestId('test-input-field');
+    const inputField = screen.getByTestId('input-field-test-id');
 
     expect(inputField).toHaveValue('');
   });
@@ -25,7 +25,7 @@ describe('InputField', () => {
   it('correctly assigns id, name and type values received via props', () => {
     render(<InputField {...props} />);
 
-    const inputField = screen.getByTestId('test-input-field');
+    const inputField = screen.getByTestId('input-field-test-id');
 
     expect(inputField).toHaveAttribute('name', 'test-input-field');
     expect(inputField).toHaveAttribute('id', 'test-input-field');
@@ -35,7 +35,7 @@ describe('InputField', () => {
   it('should display entered text', async () => {
     render(<InputField {...props} />);
 
-    const inputField = screen.getByTestId('test-input-field');
+    const inputField = screen.getByTestId('input-field-test-id');
 
     await userEvent.type(inputField, 'Testing input field');
 
@@ -47,7 +47,7 @@ describe('InputField', () => {
 
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
     const inputField = screen.getByTestId(
-      'test-input-field'
+      'input-field-test-id'
     ) as HTMLInputElement;
 
     await userEvent.type(inputField, 'Testing input field');

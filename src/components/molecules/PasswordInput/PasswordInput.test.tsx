@@ -10,15 +10,15 @@ describe('PasswordInput', () => {
   const props: PasswordInputProps = {
     id: 'test-password',
     name: 'test-password',
-    testId: 'test-password-input',
+    testId: 'password-input-test-id',
   };
 
   it('should render input of type password', () => {
     render(<PasswordInput {...props} />);
 
-    const passwordInput = screen.getByTestId('test-password-input');
+    const passwordInput = screen.getByTestId('password-input-test-id');
     const passwordInputField = within(passwordInput).getByTestId(
-      'input-field-password'
+      'input-field-password-test-id'
     );
 
     expect(passwordInputField).toHaveAttribute('type', 'password');
@@ -27,9 +27,9 @@ describe('PasswordInput', () => {
   it('should correctly assign id, name attributes received via props', () => {
     render(<PasswordInput {...props} />);
 
-    const passwordInput = screen.getByTestId('test-password-input');
+    const passwordInput = screen.getByTestId('password-input-test-id');
     const passwordInputField = within(passwordInput).getByTestId(
-      'input-field-password'
+      'input-field-password-test-id'
     );
 
     expect(passwordInputField).toHaveAttribute('id', 'test-password');
@@ -39,12 +39,12 @@ describe('PasswordInput', () => {
   it('should semantically connect input label with input field', () => {
     render(<PasswordInput {...props} />);
 
-    const passwordInput = screen.getByTestId('test-password-input');
+    const passwordInput = screen.getByTestId('password-input-test-id');
     const passwordInputLabel = within(passwordInput).getByTestId(
-      'input-label-password'
+      'input-label-password-test-id'
     );
     const passwordInputField = within(passwordInput).getByTestId(
-      'input-field-password'
+      'input-field-password-test-id'
     );
 
     expect(passwordInputLabel).toHaveAttribute(
@@ -56,9 +56,9 @@ describe('PasswordInput', () => {
   it('should render initially empty input', () => {
     render(<PasswordInput {...props} />);
 
-    const passwordInput = screen.getByTestId('test-password-input');
+    const passwordInput = screen.getByTestId('password-input-test-id');
     const passwordInputField = within(passwordInput).getByTestId(
-      'input-field-password'
+      'input-field-password-test-id'
     );
 
     expect(passwordInputField).toHaveValue('');
@@ -67,9 +67,9 @@ describe('PasswordInput', () => {
   it("should display 'Password' as input label", () => {
     render(<PasswordInput {...props} />);
 
-    const passwordInput = screen.getByTestId('test-password-input');
+    const passwordInput = screen.getByTestId('password-input-test-id');
     const passwordInputLabel = within(passwordInput).getByTestId(
-      'input-label-password'
+      'input-label-password-test-id'
     );
 
     expect(passwordInputLabel).toHaveTextContent('Password');
@@ -78,10 +78,10 @@ describe('PasswordInput', () => {
   it('should display entered text in input field', async () => {
     render(<PasswordInput {...props} />);
 
-    const passwordInput = screen.getByTestId('test-password-input');
+    const passwordInput = screen.getByTestId('password-input-test-id');
 
     const passwordInputField = within(passwordInput).getByTestId(
-      'input-field-password'
+      'input-field-password-test-id'
     );
 
     await userEvent.type(passwordInputField, 'Test password');

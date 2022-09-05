@@ -29,22 +29,25 @@ export const SignUpTemplate = ({
 }: Props) => {
   return (
     <S.Container data-testid={testId}>
-      <S.TemplateFlex direction="column" testId="flex-signup-template">
-        <AuthHeader testId="auth-header-signup-template" title={headerText} />
+      <S.TemplateFlex direction="column" testId="flex-signup-template-test-id">
+        <AuthHeader
+          testId="auth-header-signup-template-test-id"
+          title={headerText}
+        />
         <SignUpForm
-          testId="signup-form"
+          testId="signup-form-test-id"
           onSubmitSignUpForm={onSubmitSignUpForm}
         />
-        <Divider label="OR" testId="divider-signup" />
+        <Divider label="OR" testId="divider-signup-test-id" />
         <AuthSocials
-          testId="auth-socials-signup-template"
+          testId="auth-socials-signup-template-test-id"
           onClickFacebook={onClickFacebook}
           onClickGoogle={onClickGoogle}
           onClickLinkedIn={onClickLinkedIn}
         />
         <AuthFooter
           btnText={footerBtnText}
-          testId="auth-footer-signup-template"
+          testId="auth-footer-signup-template-test-id"
           text={footerText}
           onClick={onClickFooterBtn}
         />

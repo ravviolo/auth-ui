@@ -3,7 +3,7 @@
 exports[`InputField should match snapshot 1`] = `
 <input
   className="sc-ftvSup dLJLzu"
-  data-testid="test-input-field"
+  data-testid="input-field-test-id"
   id="test-input-field"
   name="test-input-field"
   type="text"

@@ -18,7 +18,7 @@ describe('AuthSocials', () => {
   >();
 
   const props: AuthSocialsProps = {
-    testId: 'test-auth-socials',
+    testId: 'auth-socials-test-id',
     onClickFacebook: mockOnClickFacebook,
     onClickGoogle: mockOnClickGoogle,
     onClickLinkedIn: mockOnClickLinkedIn,
@@ -27,9 +27,11 @@ describe('AuthSocials', () => {
   it('should render icon buttons for authenticating through socials', () => {
     render(<AuthSocials {...props} />);
 
-    const authSocials = screen.getByTestId('test-auth-socials');
+    const authSocials = screen.getByTestId('auth-socials-test-id');
 
-    const socialsIconBtns = within(authSocials).getAllByTestId(/icon-btn-/);
+    const socialsIconBtns = within(authSocials).getAllByTestId(
+      /icon-btn-([A-Z])\w+-test-id/i
+    );
 
     expect(socialsIconBtns).toHaveLength(3);
   });
@@ -37,13 +39,17 @@ describe('AuthSocials', () => {
   it('should handle click event, run event handler once', async () => {
     render(<AuthSocials {...props} />);
 
-    const authSocials = screen.getByTestId('test-auth-socials');
+    const authSocials = screen.getByTestId('auth-socials-test-id');
 
-    const facebookIconBtn =
-      within(authSocials).getByTestId(/icon-btn-facebook/i);
-    const googleIconBtn = within(authSocials).getByTestId(/icon-btn-google/i);
-    const linkedInIconBtn =
-      within(authSocials).getByTestId(/icon-btn-linkedin/i);
+    const facebookIconBtn = within(authSocials).getByTestId(
+      /icon-btn-facebook-test-id/i
+    );
+    const googleIconBtn = within(authSocials).getByTestId(
+      /icon-btn-google-test-id/i
+    );
+    const linkedInIconBtn = within(authSocials).getByTestId(
+      /icon-btn-linkedin-test-id/i
+    );
 
     await userEvent.click(facebookIconBtn);
     expect(mockOnClickFacebook).toHaveBeenCalledTimes(1);

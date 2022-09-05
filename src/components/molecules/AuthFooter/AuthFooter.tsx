@@ -10,11 +10,11 @@ export interface Props {
 export const AuthFooter = ({ btnText, testId, onClick, text }: Props) => {
   return (
     <S.Footer data-testid={testId}>
-      <S.FooterFlex direction="row" testId="flex-footer">
+      <S.FooterFlex direction="row" testId="flex-footer-test-id">
         <p>{text}</p>
         <S.FooterBtn
           label={btnText}
-          testId="btn-footer"
+          testId="btn-footer-test-id"
           type="button"
           onClick={onClick}
         />

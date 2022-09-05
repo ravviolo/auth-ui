@@ -3,7 +3,7 @@
 exports[`Flex should match snapshot - renders all children horizontally 1`] = `
 <div
   className="sc-jSMfEi iChCMC"
-  data-testid="test-flex"
+  data-testid="flex-test-id"
   direction="row"
 >
   <li />
@@ -22,7 +22,7 @@ exports[`Flex should match snapshot - renders all children horizontally 1`] = `
 exports[`Flex should match snapshot - renders all children vertically 1`] = `
 <div
   className="sc-jSMfEi bQrDqy"
-  data-testid="test-flex"
+  data-testid="flex-test-id"
   direction="column"
 >
   <li />

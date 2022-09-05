@@ -11,7 +11,7 @@ describe('TextButton', () => {
 
   const props: TextButtonProps = {
     label: 'Test Button',
-    testId: 'test-text-btn',
+    testId: 'text-btn-test-id',
     type: 'button',
     onClick: mockOnClick,
   };
@@ -19,7 +19,7 @@ describe('TextButton', () => {
   it('should render button with text received through props', () => {
     render(<TextButton {...props} />);
 
-    const textBtn = screen.getByTestId('test-text-btn');
+    const textBtn = screen.getByTestId('text-btn-test-id');
 
     expect(textBtn).toHaveTextContent('Test Button');
   });
@@ -27,7 +27,7 @@ describe('TextButton', () => {
   it('should handle click event, fires event handler once', async () => {
     render(<TextButton {...props} />);
 
-    const textBtn = screen.getByTestId('test-text-btn');
+    const textBtn = screen.getByTestId('text-btn-test-id');
 
     await userEvent.click(textBtn);
 

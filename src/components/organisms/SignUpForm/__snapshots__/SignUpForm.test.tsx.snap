@@ -2,29 +2,29 @@
 
 exports[`SignUpForm should match snapshot 1`] = `
 <form
-  data-testid="test-signup-form"
+  data-testid="signup-form-test-id"
   onSubmit={[Function]}
 >
   <div
     className="sc-jSMfEi bQrDqy sc-idiyUo wwKtw"
-    data-testid="flex-signup-form"
+    data-testid="flex-signup-form-test-id"
     direction="column"
   >
     <div
       className="sc-jSMfEi bQrDqy sc-breuTD jjaaRC"
-      data-testid="email-input-signup-form"
+      data-testid="email-input-signup-form-test-id"
       direction="column"
     >
       <label
         className="sc-papXJ daxRFt"
-        data-testid="input-label-email"
+        data-testid="input-label-email-test-id"
         htmlFor="email"
       >
         Email
       </label>
       <input
         className="sc-ftvSup dLJLzu"
-        data-testid="input-field-email"
+        data-testid="input-field-email-test-id"
         id="email"
         name="email"
         type="email"
@@ -32,19 +32,19 @@ exports[`SignUpForm should match snapshot 1`] = `
     </div>
     <div
       className="sc-jSMfEi bQrDqy sc-ksZaOG cRa-dNN"
-      data-testid="password-input-signup-form"
+      data-testid="password-input-signup-form-test-id"
       direction="column"
     >
       <label
         className="sc-papXJ daxRFt"
-        data-testid="input-label-password"
+        data-testid="input-label-password-test-id"
         htmlFor="password"
       >
         Password
       </label>
       <input
         className="sc-ftvSup dLJLzu"
-        data-testid="input-field-password"
+        data-testid="input-field-password-test-id"
         id="password"
         name="password"
         type="password"
@@ -52,7 +52,7 @@ exports[`SignUpForm should match snapshot 1`] = `
     </div>
     <button
       className="sc-bczRLJ jXOWFG"
-      data-testid="btn-submit-signup"
+      data-testid="btn-submit-signup-test-id"
       type="submit"
     >
       Sign Up

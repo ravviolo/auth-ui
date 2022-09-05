@@ -13,14 +13,14 @@ describe('IconButton', () => {
     color: 'cyan',
     icon: 'F',
     type: 'button',
-    testId: 'test-icon-btn',
+    testId: 'icon-btn-test-id',
     onClick: mockOnClick,
   };
 
   it('should render button with specified color and icon', () => {
     render(<IconButton {...props} />);
 
-    const iconBtn = screen.getByTestId('test-icon-btn');
+    const iconBtn = screen.getByTestId('icon-btn-test-id');
 
     expect(iconBtn).toHaveTextContent('F');
 
@@ -33,7 +33,7 @@ describe('IconButton', () => {
   it('should handle click event, fires event handler once', async () => {
     render(<IconButton {...props} />);
 
-    const iconBtn = screen.getByTestId('test-icon-btn');
+    const iconBtn = screen.getByTestId('icon-btn-test-id');
 
     await userEvent.click(iconBtn);
 

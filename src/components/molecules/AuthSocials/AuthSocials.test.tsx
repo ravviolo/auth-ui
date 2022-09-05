@@ -36,29 +36,49 @@ describe('AuthSocials', () => {
     expect(socialsIconBtns).toHaveLength(3);
   });
 
-  it('should handle click event, run event handler once', async () => {
+  it('should handle click events on Facebook icon - run handler once, not trigger other handlers', async () => {
     render(<AuthSocials {...props} />);
 
     const authSocials = screen.getByTestId('auth-socials-test-id');
-
     const facebookIconBtn = within(authSocials).getByTestId(
       /icon-btn-facebook-test-id/i
     );
+
+    await userEvent.click(facebookIconBtn);
+
+    expect(mockOnClickFacebook).toHaveBeenCalledTimes(1);
+    expect(mockOnClickGoogle).not.toBeCalled();
+    expect(mockOnClickLinkedIn).not.toBeCalled();
+  });
+
+  it('should handle click events on Google icon - run handler once, not trigger other handlers', async () => {
+    render(<AuthSocials {...props} />);
+
+    const authSocials = screen.getByTestId('auth-socials-test-id');
     const googleIconBtn = within(authSocials).getByTestId(
       /icon-btn-google-test-id/i
     );
+
+    await userEvent.click(googleIconBtn);
+
+    expect(mockOnClickGoogle).toHaveBeenCalledTimes(1);
+    expect(mockOnClickFacebook).not.toBeCalled();
+    expect(mockOnClickLinkedIn).not.toBeCalled();
+  });
+
+  it('should handle click events on LinkedIn icon - run handler once, not trigger other handlers', async () => {
+    render(<AuthSocials {...props} />);
+
+    const authSocials = screen.getByTestId('auth-socials-test-id');
     const linkedInIconBtn = within(authSocials).getByTestId(
       /icon-btn-linkedin-test-id/i
     );
 
-    await userEvent.click(facebookIconBtn);
-    expect(mockOnClickFacebook).toHaveBeenCalledTimes(1);
-
-    await userEvent.click(googleIconBtn);
-    expect(mockOnClickGoogle).toHaveBeenCalledTimes(1);
-
     await userEvent.click(linkedInIconBtn);
+
     expect(mockOnClickLinkedIn).toHaveBeenCalledTimes(1);
+    expect(mockOnClickFacebook).not.toBeCalled();
+    expect(mockOnClickGoogle).not.toBeCalled();
   });
 
   it('should match snapshot', () => {

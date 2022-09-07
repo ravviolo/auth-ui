@@ -1,18 +1,29 @@
 /* eslint-disable no-console */
 import { useNavigate } from 'react-router-dom';
 
+import { useAppDispatch, useAppSelector } from 'app/hooks';
 import { SignUpTemplate } from 'components/templates';
+import { registerUser, selectUser } from 'features/user/userSlice';
 
 export const SignUpPage = () => {
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const user = useAppSelector(selectUser);
 
-  const handleSignUpFormSubmit = (email: string, password: string): void => {
+  const handleSignUpFormSubmit = async (
+    email: string,
+    password: string
+  ): Promise<void> => {
     const userCredentials = {
       email,
       password,
     };
-    console.log(userCredentials);
-    console.log('Registering new user...');
+
+    try {
+      await dispatch(registerUser(userCredentials));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleSignUpViaGoogle = (): void => {
@@ -37,6 +48,7 @@ export const SignUpPage = () => {
       footerText="Already a user?"
       headerText="Sign Up"
       testId="signup-template"
+      user={user}
       onClickFacebook={handleSignUpViaFacebook}
       onClickFooterBtn={handleNavigate}
       onClickGoogle={handleSignUpViaGoogle}

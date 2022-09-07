@@ -24,7 +24,7 @@ export const LoginForm = ({
   const passwordRef = useRef<HTMLInputElement>(null);
   const rememberPasswordRef = useRef<HTMLInputElement>(null);
 
-  const handleLogin: React.FormEventHandler<HTMLFormElement> = (e) => {
+  const handleLogin: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
 
     const email = emailRef.current?.value;
@@ -32,7 +32,7 @@ export const LoginForm = ({
     const isPasswordRemembered = !!rememberPasswordRef.current?.checked;
 
     if (email && password) {
-      onSubmitLoginForm(email, password, isPasswordRemembered);
+      await onSubmitLoginForm(email, password, isPasswordRemembered);
     }
   };
 

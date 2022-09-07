@@ -1,16 +1,20 @@
 /* eslint-disable no-console */
 import { useNavigate } from 'react-router-dom';
 
+import { useAppDispatch, useAppSelector } from 'app/hooks';
 import { LoginTemplate } from 'components/templates';
+import { loginUser, selectUser } from 'features/user/userSlice';
 
 export const LoginPage = () => {
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const user = useAppSelector(selectUser);
 
-  const handleLoginFormSubmit = (
+  const handleLoginFormSubmit = async (
     email: string,
     password: string,
     isPasswordRemembered: boolean
-  ): void => {
+  ): Promise<void> => {
     const userCredentials = {
       email,
       password,
@@ -18,6 +22,12 @@ export const LoginPage = () => {
     };
     console.log(userCredentials);
     console.log('Logging user...');
+
+    try {
+      await dispatch(loginUser({ email, password }));
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleLoginViaGoogle = (): void => {
@@ -46,6 +56,7 @@ export const LoginPage = () => {
       footerText="Need an account?"
       headerText="Login"
       testId="login-template"
+      user={user}
       onClickFacebook={handleLoginViaFacebook}
       onClickFooterBtn={handleNavigate}
       onClickGoogle={handleLoginViaGoogle}

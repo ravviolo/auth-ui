@@ -30,6 +30,7 @@ describe('SignUpTemplate', () => {
 
   const props: SignUpTemplateProps = {
     testId: 'signup-template-test-id',
+    user: null,
     headerText: 'SignUp Header',
     footerText: 'SignUp Footer',
     footerBtnText: 'SignUp Footer Button',

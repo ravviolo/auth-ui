@@ -34,6 +34,7 @@ describe('LoginTemplate', () => {
 
   const props: LoginTemplateProps = {
     testId: 'login-template-test-id',
+    user: null,
     headerText: 'Login Header',
     footerText: 'Login Footer',
     footerBtnText: 'Login Footer Button',

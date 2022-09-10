@@ -53,7 +53,7 @@ export const registerUser = createAsyncThunk(
   }
 );
 
-interface UserState {
+export interface UserState {
   userData: User | null;
   status: 'idle' | 'loading' | 'complete';
 }

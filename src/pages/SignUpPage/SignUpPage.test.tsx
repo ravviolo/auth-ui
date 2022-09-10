@@ -1,7 +1,8 @@
 import { screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { RootState } from 'app/store';
+import * as reduxHooks from 'app/hooks';
+import * as userSlice from 'features/user/userSlice';
 import { SignUpPage } from 'pages';
 import { createWithProviders, renderWithProviders } from 'utils/test-utils';
 
@@ -13,10 +14,12 @@ describe('SignUpPage', () => {
   });
 
   it("after sign up should save user's data, change user's status to 'complete'", async () => {
+    const mockRegisterUser = jest.spyOn(userSlice, 'registerUser');
+    const mockDispatch = jest.spyOn(reduxHooks, 'useAppDispatch');
+    const testEmail = 'test@test.com';
+
     const { store } = renderWithProviders(<SignUpPage />);
 
-    const testEmail = 'test@test.com';
-
     const template = screen.getByTestId('signup-template-test-id');
     const emailInputField = within(template).getByTestId(
       'input-field-email-test-id'
@@ -30,47 +33,8 @@ describe('SignUpPage', () => {
     await userEvent.type(passwordInputField, 'password');
     await userEvent.click(signUpBtn);
 
-    const userStore = store.getState().user;
-
-    expect(userStore.status).toBe('complete');
-    expect(userStore.userData?.firstname).toBe('Baby');
-    expect(userStore.userData?.lastname).toBe('Yoda');
-    expect(userStore.userData?.email).toBe(testEmail);
-  });
-
-  it("should update current user's data after sign up", async () => {
-    const preloadedState: RootState = {
-      user: {
-        userData: {
-          uuid: '0a3d6cb1-c586-425a-bcbc-6660c2f07914',
-          firstname: 'Anakin',
-          lastname: 'Skywalker',
-          username: 'Mr_Vader',
-          birthday: 'Wed Jul 31 1963',
-          email: 'preloaded@state.com',
-          createdAt: 'Thu Jun 20 2002',
-          avatarUrl: 'avatarUrl',
-        },
-        status: 'complete',
-      },
-    };
-
-    const { store } = renderWithProviders(<SignUpPage />, { preloadedState });
-
-    const testEmail = 'test@test.com';
-
-    const template = screen.getByTestId('signup-template-test-id');
-    const emailInputField = within(template).getByTestId(
-      'input-field-email-test-id'
-    );
-    const passwordInputField = within(template).getByTestId(
-      'input-field-password-test-id'
-    );
-    const signUpBtn = within(template).getByTestId('btn-submit-signup-test-id');
-
-    await userEvent.type(emailInputField, testEmail);
-    await userEvent.type(passwordInputField, 'password');
-    await userEvent.click(signUpBtn);
+    expect(mockRegisterUser).toHaveBeenCalledTimes(1);
+    expect(mockDispatch).toBeCalledTimes(2);
 
     const userStore = store.getState().user;
 

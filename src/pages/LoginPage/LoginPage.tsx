@@ -12,19 +12,15 @@ export const LoginPage = () => {
 
   const handleLoginFormSubmit = async (
     email: string,
-    password: string,
-    isPasswordRemembered: boolean
+    password: string
   ): Promise<void> => {
     const userCredentials = {
       email,
       password,
-      isPasswordRemembered,
     };
-    console.log(userCredentials);
-    console.log('Logging user...');
 
     try {
-      await dispatch(loginUser({ email, password }));
+      await dispatch(loginUser(userCredentials));
     } catch (error) {
       console.log(error);
     }
@@ -55,7 +51,7 @@ export const LoginPage = () => {
       footerBtnText="Sign Up"
       footerText="Need an account?"
       headerText="Login"
-      testId="login-template"
+      testId="login-template-test-id"
       user={user}
       onClickFacebook={handleLoginViaFacebook}
       onClickFooterBtn={handleNavigate}

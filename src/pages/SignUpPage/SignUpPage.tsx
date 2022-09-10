@@ -47,7 +47,7 @@ export const SignUpPage = () => {
       footerBtnText="Login"
       footerText="Already a user?"
       headerText="Sign Up"
-      testId="signup-template"
+      testId="signup-template-test-id"
       user={user}
       onClickFacebook={handleSignUpViaFacebook}
       onClickFooterBtn={handleNavigate}

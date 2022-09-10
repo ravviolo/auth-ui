@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginPage should match snapshot 1`] = `
+<main
+  className="sc-dIouRR LRUwC"
+  data-testid="login-template-test-id"
+>
+  <div
+    className="sc-jSMfEi bQrDqy sc-hHLeRK jMMdQ"
+    data-testid="flex-login-template-test-id"
+    direction="column"
+  >
+    <header
+      data-testid="auth-header-login-template-test-id"
+    >
+      <h1
+        className="sc-gKXOVf zAjwy"
+        data-testid="auth-heading-test-id"
+      >
+        Login
+      </h1>
+    </header>
+    <form
+      data-testid="login-form-test-id"
+      onSubmit={[Function]}
+    >
+      <div
+        className="sc-jSMfEi bQrDqy sc-hAZoDl bWsHpL"
+        data-testid="flex-login-form-test-id"
+        direction="column"
+      >
+        <div
+          className="sc-jSMfEi bQrDqy sc-breuTD jjaaRC"
+          data-testid="email-input-login-form-test-id"
+          direction="column"
+        >
+          <label
+            className="sc-papXJ daxRFt"
+            data-testid="input-label-email-test-id"
+            htmlFor="email"
+          >
+            Email
+          </label>
+          <input
+            className="sc-ftvSup dLJLzu"
+            data-testid="input-field-email-test-id"
+            id="email"
+            name="email"
+            type="email"
+          />
+        </div>
+        <div
+          className="sc-jSMfEi bQrDqy sc-fnykZs hELmKH"
+          data-testid="flex-login-form-password-control-test-id"
+          direction="column"
+        >
+          <div
+            className="sc-jSMfEi bQrDqy sc-ksZaOG cRa-dNN"
+            data-testid="password-input-login-form-test-id"
+            direction="column"
+          >
+            <label
+              className="sc-papXJ daxRFt"
+              data-testid="input-label-password-test-id"
+              htmlFor="password"
+            >
+              Password
+            </label>
+            <input
+              className="sc-ftvSup dLJLzu"
+              data-testid="input-field-password-test-id"
+              id="password"
+              name="password"
+              type="password"
+            />
+          </div>
+          <div
+            className="sc-jSMfEi iChCMC sc-fEOsli dPSjkT"
+            data-testid="flex-login-form-checkbox-test-id"
+            direction="row"
+          >
+            <input
+              className="sc-gsnTZi kVuJZl"
+              data-testid="remember-password-checkbox-test-id"
+              id="rememberPassword"
+              name="rememberPassword"
+              type="checkbox"
+            />
+            <label
+              className="sc-papXJ daxRFt"
+              data-testid="input-label-remember-password-checkbox-test-id"
+              htmlFor="rememberPassword"
+            >
+              Remember me?
+            </label>
+          </div>
+        </div>
+        <button
+          className="sc-bczRLJ jXOWFG"
+          data-testid="btn-submit-login-test-id"
+          type="submit"
+        >
+          Login
+        </button>
+        <button
+          className="sc-jqUVSM ebpvV sc-bjUoiL hqHESO"
+          data-testid="btn-reset-password-test-id"
+          onClick={[Function]}
+          type="button"
+        >
+          Forgot Password?
+        </button>
+      </div>
+    </form>
+    <div
+      className="sc-dkzDqf fBSlBa"
+      data-testid="divider-login-test-id"
+    >
+      <div
+        className="sc-hKMtZM cJojKy"
+      />
+      <span
+        className="sc-eCYdqJ fGmLST"
+      >
+        OR
+      </span>
+    </div>
+    <div
+      className="sc-jSMfEi iChCMC sc-evZas fBPmfS"
+      data-testid="auth-socials-login-template-test-id"
+      direction="row"
+    >
+      <button
+        className="sc-iBkjds cxbDaZ"
+        color="#DB4437"
+        data-testid="icon-btn-Google-test-id"
+        onClick={[Function]}
+        type="button"
+      >
+        G
+      </button>
+      <button
+        className="sc-iBkjds bqhZzF"
+        color="#4267B2"
+        data-testid="icon-btn-Facebook-test-id"
+        onClick={[Function]}
+        type="button"
+      >
+        f
+      </button>
+      <button
+        className="sc-iBkjds hAqsSt"
+        color="#0077B5"
+        data-testid="icon-btn-LinkedIn-test-id"
+        onClick={[Function]}
+        type="button"
+      >
+        in
+      </button>
+    </div>
+    <footer
+      className="sc-kDDrLX kktpMP"
+      data-testid="auth-footer-login-template-test-id"
+    >
+      <div
+        className="sc-jSMfEi iChCMC sc-crXcEl bUmuaF"
+        data-testid="flex-footer-test-id"
+        direction="row"
+      >
+        <p>
+          Need an account?
+        </p>
+        <button
+          className="sc-jqUVSM ebpvV sc-iqcoie bPYbbt"
+          data-testid="btn-footer-test-id"
+          onClick={[Function]}
+          type="button"
+        >
+          Sign Up
+        </button>
+      </div>
+    </footer>
+  </div>
+</main>
+`;

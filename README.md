@@ -1,46 +1,69 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Login/Register UI
 
-## Available Scripts
+A two-paged React view holding login and sign up form components. 
+Created in the spirit of [Atomic Design](https://atomicdesign.bradfrost.com/table-of-contents/) architecture. 
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+<p align="center">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge)
+![https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black&style=for-the-badge](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black&style=for-the-badge)
+![https://img.shields.io/badge/-React%20Router-CA4245?logo=react-router&logoColor=white&style=for-the-badge](https://img.shields.io/badge/-React%20Router-CA4245?logo=react-router&logoColor=white&style=for-the-badge)
+![https://img.shields.io/badge/-Redux-764ABC?logo=redux&logoColor=white&style=for-the-badge](https://img.shields.io/badge/-Redux-764ABC?logo=redux&logoColor=white&style=for-the-badge)
+![https://img.shields.io/badge/-Styled%20Components-DB7093?logo=styled-components&logoColor=white&style=for-the-badge](https://img.shields.io/badge/-Styled%20Components-DB7093?logo=styled-components&logoColor=white&style=for-the-badge)
+![https://img.shields.io/badge/-Jest-C21325?logo=jest&logoColor=white&style=for-the-badge](https://img.shields.io/badge/-Jest-C21325?logo=jest&logoColor=white&style=for-the-badge)
+![https://img.shields.io/badge/-Testing%20Library-E33332?logo=testing-library&logoColor=white&style=for-the-badge](https://img.shields.io/badge/-Testing%20Library-E33332?logo=testing-library&logoColor=white&style=for-the-badge)
+![https://img.shields.io/badge/-Storybook-FF4785?logo=storybook&logoColor=white&style=for-the-badge](https://img.shields.io/badge/-Storybook-FF4785?logo=storybook&logoColor=white&style=for-the-badge)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+</p>
 
-### `npm test`
+## Run Locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the project
 
-### `npm run build`
+```bash
+  git clone https://github.com/ravviolo/auth-ui.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Go to the project directory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  cd auth-ui
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install dependencies
 
-### `npm run eject`
+```bash
+  npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Start the server
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Storybook
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To visualize isolated components without spinning up the development server open storybook with the following command
 
-## Learn More
+```bash
+  npm run storybook
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm test
+```
+
+
+## Screenshots
+
+[![Login-Page.png](https://i.postimg.cc/44FdvBMc/Login-Page.png)](https://postimg.cc/yWcssX76)
+[![Signup-Page.png](https://i.postimg.cc/G2gcQmMR/Signup-Page.png)](https://postimg.cc/2bvRjrR9)

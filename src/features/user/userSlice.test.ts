@@ -8,12 +8,11 @@ import userReducer, {
   registerUser,
   selectUser,
   selectUserFetchStatus,
-  UserState,
 } from './userSlice';
 
 describe('user reducer', () => {
   it('should return the initial state when passed an empty action', () => {
-    const initialState: UserState = { userData: null, status: 'idle' };
+    const initialState = undefined;
     const action: Action<string> = { type: '' };
     const state = userReducer(initialState, action);
 

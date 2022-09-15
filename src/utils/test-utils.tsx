@@ -2,7 +2,7 @@ import { PreloadedState } from '@reduxjs/toolkit';
 import { render, RenderOptions } from '@testing-library/react';
 import React, { PropsWithChildren } from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter, MemoryRouterProps } from 'react-router-dom';
 import {
   create,
   ReactTestRenderer,
@@ -14,6 +14,7 @@ import { AppStore, RootState, setupStore } from 'store';
 interface StoreOptions {
   preloadedState?: PreloadedState<RootState>;
   store?: AppStore;
+  preloadedHistory?: MemoryRouterProps['initialEntries'];
 }
 
 export const renderWithProviders = (
@@ -21,14 +22,15 @@ export const renderWithProviders = (
   {
     preloadedState = {},
     store = setupStore(preloadedState),
+    preloadedHistory = ['/'],
   }: StoreOptions = {},
   renderOptions: RenderOptions = {}
 ) => {
   const Wrapper = ({ children }: PropsWithChildren<{}>): JSX.Element => {
     return (
-      <BrowserRouter>
+      <MemoryRouter initialEntries={preloadedHistory}>
         <Provider store={store}>{children}</Provider>
-      </BrowserRouter>
+      </MemoryRouter>
     );
   };
 
@@ -40,12 +42,13 @@ export const createWithProviders = (
   {
     preloadedState = {},
     store = setupStore(preloadedState),
+    preloadedHistory = ['/'],
   }: StoreOptions = {},
   testRendererOptions?: TestRendererOptions
 ): ReactTestRenderer =>
   create(
-    <BrowserRouter>
+    <MemoryRouter initialEntries={preloadedHistory}>
       <Provider store={store}>{ui}</Provider>
-    </BrowserRouter>,
+    </MemoryRouter>,
     testRendererOptions
   );

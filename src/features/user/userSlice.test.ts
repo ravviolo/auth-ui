@@ -16,7 +16,7 @@ describe('user reducer', () => {
     const action: Action<string> = { type: '' };
     const state = userReducer(initialState, action);
 
-    expect(state).toEqual(initialState);
+    expect(state).toEqual({ status: 'idle', userData: null });
   });
 });
 

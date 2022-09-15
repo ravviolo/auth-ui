@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
 import { useNavigate } from 'react-router-dom';
 
-import { useAppDispatch, useAppSelector } from 'app/hooks';
 import { SignUpTemplate } from 'components/templates';
-import { registerUser, selectUser } from 'features/user/userSlice';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { registerUser, selectUser } from 'store/user/userSlice';
 
 export const SignUpPage = () => {
   const navigate = useNavigate();

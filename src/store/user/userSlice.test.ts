@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Action } from '@reduxjs/toolkit';
 
-import { RootState, setupStore } from 'app/store';
+import { RootState, setupStore } from 'store';
 
 import userReducer, {
   loginUser,

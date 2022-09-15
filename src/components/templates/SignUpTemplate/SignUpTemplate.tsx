@@ -1,7 +1,7 @@
 import { Divider, Flex } from 'components/atoms';
 import { AuthFooter, AuthHeader, AuthSocials } from 'components/molecules';
 import { SignUpForm } from 'components/organisms';
-import { User } from 'features/user/userSlice';
+import { User } from 'store/user/userSlice';
 
 import * as S from './SignUpTemplate.styles';
 

@@ -4,7 +4,7 @@ import { LoginForm } from 'components/organisms';
 
 import * as S from './LoginTemplate.styles';
 
-import type { User } from 'features/user/userSlice';
+import type { User } from 'store/user/userSlice';
 
 export interface Props {
   onSubmitLoginForm: (

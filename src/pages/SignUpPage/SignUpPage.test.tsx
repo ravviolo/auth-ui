@@ -1,8 +1,8 @@
 import { screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { RootState } from 'app/store';
 import { SignUpPage } from 'pages';
+import { RootState } from 'store';
 import { createWithProviders, renderWithProviders } from 'utils/test-utils';
 
 describe('SignUpPage', () => {

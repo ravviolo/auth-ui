@@ -9,7 +9,7 @@ import {
   TestRendererOptions,
 } from 'react-test-renderer';
 
-import { AppStore, RootState, setupStore } from 'app/store';
+import { AppStore, RootState, setupStore } from 'store';
 
 interface StoreOptions {
   preloadedState?: PreloadedState<RootState>;

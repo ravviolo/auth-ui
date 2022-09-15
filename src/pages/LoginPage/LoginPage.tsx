@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
 import { useNavigate } from 'react-router-dom';
 
-import { useAppDispatch, useAppSelector } from 'app/hooks';
 import { LoginTemplate } from 'components/templates';
-import { loginUser, selectUser } from 'features/user/userSlice';
+import { useAppDispatch, useAppSelector } from 'store/hooks';
+import { loginUser, selectUser } from 'store/user/userSlice';
 
 export const LoginPage = () => {
   const navigate = useNavigate();

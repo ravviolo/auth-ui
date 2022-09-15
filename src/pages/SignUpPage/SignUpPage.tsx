@@ -19,11 +19,7 @@ export const SignUpPage = () => {
       password,
     };
 
-    try {
-      await dispatch(registerUser(userCredentials));
-    } catch (error) {
-      console.log(error);
-    }
+    await dispatch(registerUser(userCredentials));
   };
 
   const handleSignUpViaGoogle = (): void => {

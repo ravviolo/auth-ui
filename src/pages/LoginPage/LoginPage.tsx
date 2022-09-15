@@ -19,11 +19,7 @@ export const LoginPage = () => {
       password,
     };
 
-    try {
-      await dispatch(loginUser(userCredentials));
-    } catch (error) {
-      console.log(error);
-    }
+    await dispatch(loginUser(userCredentials));
   };
 
   const handleLoginViaGoogle = (): void => {

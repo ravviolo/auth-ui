@@ -25,6 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "npm test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .ts,.tsx src/",
     "lint:fix": "npm run lint -- --fix",
@@ -45,6 +46,19 @@
           "import/no-anonymous-default-export": "off"
         }
       }
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "storybook",
+      ".stories.*",
+      ".d.ts",
+      "reportWebVitals.ts",
+      "Router.tsx",
+      "src/index.tsx"
     ]
   },
   "browserslist": {

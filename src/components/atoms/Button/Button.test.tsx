@@ -12,9 +12,16 @@ describe('Button', () => {
   const props: ButtonProps = {
     label: 'Test Button',
     testId: 'btn-test-id',
-    type: 'button',
     onClick: mockOnClick,
   };
+
+  it("should assign default type as 'button'", () => {
+    render(<Button {...props} />);
+
+    const btn = screen.getByTestId('btn-test-id');
+
+    expect(btn).toHaveAttribute('type', 'button');
+  });
 
   it('should display text received via props', () => {
     render(<Button {...props} />);

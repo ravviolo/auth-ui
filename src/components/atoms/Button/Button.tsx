@@ -2,7 +2,7 @@ import * as S from './Button.styles';
 
 export interface Props {
   label: string;
-  type: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit' | 'reset';
   testId: string;
   onClick?: () => void;
 }

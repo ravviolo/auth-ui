@@ -2,7 +2,7 @@ import * as S from './IconButton.styles';
 
 export interface Props {
   icon: string;
-  type: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit' | 'reset';
   color: string;
   testId: string;
   className?: string;

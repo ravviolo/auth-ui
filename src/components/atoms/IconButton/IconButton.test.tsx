@@ -12,10 +12,17 @@ describe('IconButton', () => {
   const props: IconButtonProps = {
     color: 'cyan',
     icon: 'F',
-    type: 'button',
     testId: 'icon-btn-test-id',
     onClick: mockOnClick,
   };
+
+  it("should assign default type as 'button'", () => {
+    render(<IconButton {...props} />);
+
+    const iconBtn = screen.getByTestId('icon-btn-test-id');
+
+    expect(iconBtn).toHaveAttribute('type', 'button');
+  });
 
   it('should render button with specified color and icon', () => {
     render(<IconButton {...props} />);

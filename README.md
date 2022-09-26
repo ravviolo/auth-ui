@@ -64,6 +64,12 @@ To run tests, run the following command
   npm test
 ```
 
+To check test coverage run
+
+```bash
+  npm run test:coverage
+```
+
 
 ## Screenshots
 
